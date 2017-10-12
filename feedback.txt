@@ -1,0 +1,9 @@
+Improvements:
+- Originially thought this was a handheld, hand pressed pad. Was surprised to see the max weight of 150 at the bottom. Clarify this earlier. (also 150 is very light I'm 200 bro)
+- Prototype plan doesnt explicitly say whether the design is evolutionary or experimental
+
+
+Good things:
+- Good technical summary under software breakdown
+- Good summary of hardware use(d)
+- good description of project
