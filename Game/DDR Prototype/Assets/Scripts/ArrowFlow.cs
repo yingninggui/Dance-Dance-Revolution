@@ -11,46 +11,26 @@ public enum StandardControls{
 	down
 }
 
-// load images and let them drop continuously 
-
 public class MovingArrows : MonoBehaviour {
 
-	public int dropSpeed = 1;
+//	public double dropSpeed = 100; 
+//	private Rigidbody2D arrowLeft = ge
 
-	private BoxCollider2D boxCollider; 
-	private Rigidbody2D rb2D; 
+	void start() {
 
-
-
-	public Vector3 userDirection = Vector2.down;
-
-	private GameObject Arrow; 
-	// Use this for initialization
-
-	protected virtual void Start () { 
-
-		boxCollider = GetComponent<BoxCollider2D> ();
-
-		// NEED TO MAKE ARROWS FALL I CANT UNITY GIMME A SEC
-
+		// arrows to like show up 
 	}
 
-	protected IEnumerator SmoothMOvement (Vector3 end){
-		float sqrRemainingDistance = (transform.position - end).sqrMagnitude; 
-		while (sqrRemainingDistance > float.Epislon) {
-			Vector3 newPosition = Vector3.MoveTowards 
-		}
-	}
+//NEED TO MAKE ARROWS FALL I CANT UNITY GIMME A SEC
 
 	void Update () {
 
-		int yPosition=20, xPosition=20; 
-			
-		while (yPosition > 100) {
-
-			transform.Translate (userDirection * dropSpeed * 10); 
-			yPosition -= dropSpeed * 10; 
-		} 
+//		double yPosition = 5; 
+//
+//		transform.Translate (yPosition - (0.0001 * dropSpeed)); 
+//		// move down and disapear once its at the bottom 
+//
+//
 		// INSERT EXIT POINT TO MAKE ARROWS STOP FALLING 
 		
 	}

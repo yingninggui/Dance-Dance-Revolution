@@ -25,3 +25,5 @@
 /Users/yingninggui/Desktop/1A/SE101/Project/se101-f17-group-31/Game/DDR Prototype/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/yingninggui/Desktop/1A/SE101/Project/se101-f17-group-31/Game/DDR Prototype/obj/Debug/Assembly-CSharp.dll
 /Users/yingninggui/Desktop/1A/SE101/Project/se101-f17-group-31/Game/DDR Prototype/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/yingninggui/Desktop/1A/SE101/Project/se101-f17-group-31/Game/DDR Prototype/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/yingninggui/Desktop/1A/SE101/Project/se101-f17-group-31/Game/DDR Prototype/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
