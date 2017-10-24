@@ -15,6 +15,12 @@ public class arrowRight : MonoBehaviour {
 
 		float tracker = 10f;
 
+	
+
+		transform.Translate (Vector3.left * 2 * Time.deltaTime); 
+		System.Threading.Thread.Sleep(100);
+
+
 		while (tracker > 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 
