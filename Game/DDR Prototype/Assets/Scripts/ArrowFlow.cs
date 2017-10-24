@@ -15,15 +15,31 @@ public enum StandardControls{
 
 public class MovingArrows : MonoBehaviour {
 
-	public static int dropSpeed = 1;
+	public int dropSpeed = 1;
+
+	private BoxCollider2D boxCollider; 
+	private Rigidbody2D rb2D; 
+
+
+
 	public Vector3 userDirection = Vector2.down;
 
 	private GameObject Arrow; 
 	// Use this for initialization
 
-	void Start () { 
+	protected virtual void Start () { 
+
+		boxCollider = GetComponent<BoxCollider2D> ();
+
 		// NEED TO MAKE ARROWS FALL I CANT UNITY GIMME A SEC
 
+	}
+
+	protected IEnumerator SmoothMOvement (Vector3 end){
+		float sqrRemainingDistance = (transform.position - end).sqrMagnitude; 
+		while (sqrRemainingDistance > float.Epislon) {
+			Vector3 newPosition = Vector3.MoveTowards 
+		}
 	}
 
 	void Update () {
