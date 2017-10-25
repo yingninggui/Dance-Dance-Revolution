@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using System.IO.Ports;
 
 public class SerialCommunication : MonoBehaviour {
@@ -22,11 +23,12 @@ public class SerialCommunication : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        try
-        {
+        try {
             string message = serial.ReadLine();
             Debug.Log("Received Message: " + message);
         }
-        catch (TimeoutException e) { }
+        catch (TimeoutException e) {
+            Debug.LogError(e.Message);
+        }
     }
 }
