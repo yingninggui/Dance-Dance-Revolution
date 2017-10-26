@@ -7,18 +7,18 @@ using System.IO.Ports;
 public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
-    private SerialPort serial;
+    private const string PORT = "\\\\.\\COM8";
+    private SerialPort serial = new SerialPort(PORT, 9600);
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Debug.Log("Launched Start Method");
 
-        string port = "COM8";
-        serial = new SerialPort(port, 9600);
-        if (!serial.IsOpen)
-            serial.Open();
+        Debug.Log(SerialPort.GetPortNames());
 
-        Debug.Log("Initialized Port " + port);
+        serial.Open();
+
+        Debug.Log("Initialized Port " + PORT);
     }
 	
 	// Update is called once per frame
