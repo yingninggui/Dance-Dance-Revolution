@@ -13,10 +13,10 @@ public class arrowLeft : MonoBehaviour {
 
 	void Update () {
 
-		float tracker = 10f;
+		float tracker = 1f;
 
 		transform.Translate (Vector3.right * 1 * Time.deltaTime); 
-		System.Threading.Thread.Sleep(100);
+		//System.Threading.Thread.Sleep(100);
 
 		while (tracker > 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 

@@ -13,12 +13,12 @@ public class arrowRight : MonoBehaviour {
 
 	void Update () {
 
-		float tracker = 10f;
+		float tracker = 1f;
 
 	
 
 		transform.Translate (Vector3.left * 2 * Time.deltaTime); 
-		System.Threading.Thread.Sleep(100);
+		//System.Threading.Thread.Sleep(100);
 
 
 		while (tracker > 0) {
