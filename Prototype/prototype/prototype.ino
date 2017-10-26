@@ -12,6 +12,7 @@ void setup() {
 void loop() {
   val = digitalRead(IN);
   Serial.flush();
-  Serial.println(val);
-  delay(1000);
+  if(val == 0)
+    Serial.println(val);
+  delay(30);
 }
