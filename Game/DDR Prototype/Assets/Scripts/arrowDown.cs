@@ -19,7 +19,9 @@ public class arrowDown : MonoBehaviour {
 
 		float tracker=1f;
 
-		transform.Translate (Vector3.right * 3 * Time.deltaTime);
+
+//		transform.Translate (Vector3.right * 3 * Time.deltaTime);
+
 		while (tracker >= 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 

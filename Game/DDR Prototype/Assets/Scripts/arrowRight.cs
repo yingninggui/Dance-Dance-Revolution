@@ -17,7 +17,7 @@ public class arrowRight : MonoBehaviour {
 
 	
 
-		transform.Translate (Vector3.left * 2 * Time.deltaTime); 
+//		transform.Translate (Vector3.left * 2 * Time.deltaTime); 
 		//System.Threading.Thread.Sleep(100);
 
 

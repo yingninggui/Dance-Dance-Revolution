@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3032f2ac6c1d04f7590dc375147b08b5
+timeCreated: 1508987763
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - soundBackground: {fileID: 8300000, guid: 380b29682d1754fd3b6e97a2959f9bf7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
