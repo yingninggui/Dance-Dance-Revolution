@@ -21,12 +21,11 @@ public class arrowDown : MonoBehaviour {
 //		float newPosition; 
 
 		transform.Translate (Vector3.right * 3 * Time.deltaTime); 
-<<<<<<< HEAD
+
 		System.Threading.Thread.Sleep(100);
 
-=======
 		//System.Threading.Thread.Sleep(100);
->>>>>>> 5d1ca25bbb1c683586cada44c0679fe611c5586a
+
 		while (tracker >= 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 

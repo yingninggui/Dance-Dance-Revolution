@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using System.IO.Ports;
-//
+
+//﻿//using System.Collections;
+////using System.Collections.Generic;
+////using UnityEngine;
+////using System.IO.Ports;
+////
 //public class SerialCommunication : MonoBehaviour {
 //
 //    public GameObject GameScreen;
@@ -31,7 +31,7 @@
 //        catch (TimeoutException e) { }
 //    }
 //}
-=======
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,4 +67,3 @@ public class SerialCommunication : MonoBehaviour {
         }*/
     }
 }
->>>>>>> 5d1ca25bbb1c683586cada44c0679fe611c5586a
