@@ -65,7 +65,7 @@ public class SerialCommunication : MonoBehaviour {
         if (running)
         {
             running = false;
-            thread.Join();
+            //thread.Join();
         }
     }
 

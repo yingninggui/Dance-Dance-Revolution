@@ -557,13 +557,9 @@ GameObject:
   - component: {fileID: 1819647243}
   - component: {fileID: 1819647242}
   - component: {fileID: 1819647245}
-<<<<<<< HEAD
-=======
-  - component: {fileID: 1819647244}
   - component: {fileID: 1819647246}
   - component: {fileID: 1819647247}
   - component: {fileID: 1819647248}
->>>>>>> e0177e14b4a847127d5f1ccba9f04a8847c36b24
   m_Layer: 0
   m_Name: GameScreen
   m_TagString: Untagged
@@ -639,11 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   GameScreen: {fileID: 1819647241}
   GlowBox: {fileID: 1602672889}
-=======
-  GameScreen: {fileID: 0}
 --- !u!114 &1819647246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundBackground: {fileID: 8300000, guid: 269a0e61e302d4d9185584510f74aea5, type: 3}
->>>>>>> e0177e14b4a847127d5f1ccba9f04a8847c36b24
 --- !u!1 &2065647432 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1341541282970604, guid: ad6e41d61190d4ef6a1b53684176c381,
