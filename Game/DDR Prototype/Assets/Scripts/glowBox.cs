@@ -10,24 +10,21 @@ public class glowBox : MonoBehaviour{
 	int glowing = 0; 
 
 	void Start() {
-		
 	}
 
-	void doesGlow(int bright) {
+	public void doesGlow(char bright) {
 
-		if (bright==0) {
-			gameObject.SetActive(false);
+		if (bright=='0') {
+			gameObject.SetActive(true);
 
 		}
 		else{
-			gameObject.SetActive(true);
-			Debug.Log ("hello"); 
+			gameObject.SetActive(false);
 		}
 
 	}
 
 	void Update() {
-		doesGlow (1); 
 	}
 //	Image glowing;
 //	int tap = 0; 

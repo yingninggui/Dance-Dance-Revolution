@@ -435,7 +435,6 @@ GameObject:
   - component: {fileID: 1819647243}
   - component: {fileID: 1819647242}
   - component: {fileID: 1819647245}
-  - component: {fileID: 1819647244}
   m_Layer: 0
   m_Name: GameScreen
   m_TagString: Untagged
@@ -500,18 +499,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1819647244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1819647241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameScreen: {fileID: 0}
 --- !u!114 &1819647245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameScreen: {fileID: 0}
+  GameScreen: {fileID: 1819647241}
+  GlowBox: {fileID: 1602672889}
 --- !u!1 &2065647432 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1341541282970604, guid: ad6e41d61190d4ef6a1b53684176c381,

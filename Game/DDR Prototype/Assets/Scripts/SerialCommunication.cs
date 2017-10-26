@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-
-//﻿//using System.Collections;
-////using System.Collections.Generic;
-////using UnityEngine;
-////using System.IO.Ports;
-////
-//public class SerialCommunication : MonoBehaviour {
-//
-//    public GameObject GameScreen;
-//    private SerialPort serial;
-//
-//	// Use this for initialization
-//	void Start () {
-//        Debug.Log("Launched Start Method");
-//
-//        string port = "COM8";
-//        serial = new SerialPort(port, 9600);
-//        if (!serial.IsOpen)
-//            serial.Open();
-//
-//        Debug.Log("Initialized Port " + port);
-//    }
-//	
-//	// Update is called once per frame
-//	void Update () {
-//        try
-//        {
-//            string message = serial.ReadLine();
-//            Debug.Log("Received Message: " + message);
-//        }
-//        catch (TimeoutException e) { }
-//    }
-//}
-
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +11,9 @@ using System.IO.Ports;
 public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
+    public glowBox GlowBox;
+    int frame = 0;
+
     bool running;
     Thread thread;
     private const string PORT = "\\\\.\\COM8";
@@ -53,8 +21,9 @@ public class SerialCommunication : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        thread = new Thread(StartSerialCommunication);
-        thread.Start();
+        /*thread = new Thread(StartSerialCommunication);
+        thread.Start();*/
+        StartSerialCommunication();
     }
 
     void StartSerialCommunication()
@@ -62,6 +31,8 @@ public class SerialCommunication : MonoBehaviour {
         Debug.Log("Launched Start Method");
 
         Debug.Log(SerialPort.GetPortNames());
+        serial.ReadTimeout = 5;
+        GlowBox.doesGlow('1');
         running = true;
         try
         {
@@ -72,15 +43,19 @@ public class SerialCommunication : MonoBehaviour {
 
         Debug.Log("Initialized Port " + PORT);
 
-        while (running)
+    }
+
+    void checkSerialStream()
+    {
+        try
         {
-            try
-            {
-                Debug.Log(serial.ReadLine());
-            } catch (Exception e)
-            {
-                Debug.LogError(e.Message);
-            }
+            string s = serial.ReadLine();
+            GlowBox.doesGlow(s[0]);
+            Debug.Log(s);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e.Message);
         }
     }
 
@@ -96,13 +71,11 @@ public class SerialCommunication : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        /*
-        try {
-            string message = serial.ReadLine();
-            Debug.Log("Received Message: " + message);
+        frame++;
+        if (frame % 2 == 0)
+        {
+            checkSerialStream();
+            frame = 0;
         }
-        catch (TimeoutException e) {
-            Debug.LogError(e.Message);
-        }*/
     }
 }
