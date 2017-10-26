@@ -22,6 +22,7 @@ public class arrowDown : MonoBehaviour {
 
 		transform.Translate (Vector3.right * 3 * Time.deltaTime); 
 		System.Threading.Thread.Sleep(100);
+
 		while (tracker >= 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 

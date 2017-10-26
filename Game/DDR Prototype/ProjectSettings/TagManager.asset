@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 2104674435
     locked: 0
+  - name: Middle Ground
+    uniqueID: 4292317757
+    locked: 0
   - name: Arrows
     uniqueID: 176839691
     locked: 0
