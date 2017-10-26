@@ -17,11 +17,11 @@ public class arrowDown : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float tracker=10f;
+		float tracker=1f;
 //		float newPosition; 
 
 		transform.Translate (Vector3.right * 3 * Time.deltaTime); 
-		System.Threading.Thread.Sleep(100);
+		//System.Threading.Thread.Sleep(100);
 		while (tracker >= 0) {
 			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 

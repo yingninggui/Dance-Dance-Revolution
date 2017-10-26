@@ -23,12 +23,13 @@ public class SerialCommunication : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         try {
             string message = serial.ReadLine();
             Debug.Log("Received Message: " + message);
         }
         catch (TimeoutException e) {
             Debug.LogError(e.Message);
-        }
+        }*/
     }
 }
