@@ -5,7 +5,8 @@ using UnityEngine;
 public class soundInput : MonoBehaviour {
 	public AudioClip soundBackground; 
 	private AudioSource soundtrack; 
-	// Use this for initialization
+
+
 	void Awake () {
 		soundtrack = GetComponent<AudioSource>();  
 	}

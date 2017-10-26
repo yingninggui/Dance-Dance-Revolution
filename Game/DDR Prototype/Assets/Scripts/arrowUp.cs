@@ -13,8 +13,8 @@ public class arrowUp : MonoBehaviour {
 
 	void Update () {
 		float tracker = 1f;
-
-		transform.Translate (Vector3.left * 1 * Time.deltaTime); 
+//
+//		transform.Translate (Vector3.left * 1 * Time.deltaTime); 
 		//System.Threading.Thread.Sleep(100);
 
 		while (tracker > 0) {

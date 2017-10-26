@@ -138,7 +138,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 269a0e61e302d4d9185584510f74aea5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 380b29682d1754fd3b6e97a2959f9bf7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -220,7 +220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &31961334
 MonoBehaviour:
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundBackground: {fileID: 8300000, guid: 269a0e61e302d4d9185584510f74aea5, type: 3}
+  soundBackground: {fileID: 8300000, guid: 380b29682d1754fd3b6e97a2959f9bf7, type: 3}
 --- !u!1 &340783650 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1331620894620158, guid: a7b0bcc0ac6fe405db6264daa939eacf,
@@ -679,11 +679,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.03
+  Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -735,7 +735,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -825,6 +825,31 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.8455882
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7756085
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
