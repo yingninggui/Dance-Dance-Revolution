@@ -435,6 +435,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad6e41d61190d4ef6a1b53684176c381, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1602672888 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1277345822466530, guid: aab2effe9372d4220b435b834ad1f69b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2079637007}
+--- !u!114 &1602672889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602672888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375792b68414341de8a874bbcf83dc68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glow: {fileID: 1277345822466530, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
 --- !u!1001 &1781086770
 Prefab:
   m_ObjectHideFlags: 0
@@ -549,7 +566,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &1819647242
 SpriteRenderer:
@@ -756,3 +773,59 @@ MonoBehaviour:
   dropSpeed: 0.7
   theRightArrow: {fileID: 1341541282970604, guid: ad6e41d61190d4ef6a1b53684176c381,
     type: 2}
+--- !u!1001 &2079637007
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223246367484452, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277345822466530, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_Name
+      value: glowBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -2649539
+      objectReference: {fileID: 0}
+    - target: {fileID: 212506276209090904, guid: aab2effe9372d4220b435b834ad1f69b,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+  m_IsPrefabParent: 0
