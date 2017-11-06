@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4223246367484452}
   - component: {fileID: 212506276209090904}
   m_Layer: 0
-  m_Name: glowBox
+  m_Name: glowBox1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
