@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-﻿using UnityEngine;
-
 using System;
 using System.Threading;
 using System.IO.Ports;
@@ -11,7 +9,7 @@ using System.IO.Ports;
 public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
-    public glowBox GlowBox;
+    public glowBox1 GlowBox1;
     int frame = 0;
 
     bool running;
@@ -32,7 +30,7 @@ public class SerialCommunication : MonoBehaviour {
 
         Debug.Log(SerialPort.GetPortNames());
         serial.ReadTimeout = 5;
-        GlowBox.doesGlow('1');
+        GlowBox1.doesGlow('1');
         running = true;
         try
         {
@@ -50,7 +48,7 @@ public class SerialCommunication : MonoBehaviour {
         try
         {
             string s = serial.ReadLine();
-            GlowBox.doesGlow(s[0]);
+            GlowBox1.doesGlow(s[0]);
             Debug.Log(s);
         }
         catch (Exception e)

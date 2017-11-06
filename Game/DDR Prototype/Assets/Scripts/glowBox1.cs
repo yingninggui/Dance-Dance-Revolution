@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using System.Visibility; 
- 
 
-public class glowBox : MonoBehaviour{
+public class glowBox1 : MonoBehaviour {
 	public GameObject glow;
 	int glowing = 0; 
 
@@ -26,20 +24,4 @@ public class glowBox : MonoBehaviour{
 
 	void Update() {
 	}
-//	Image glowing;
-//	int tap = 0; 
-//
-//	void Start()
-//	{
-//		glowing = GetComponent<Image>();
-//	}
-//
-//	void glow()
-//	{
-//		if (tap == 0) {
-//			glowing.Visibility = Visibility.Collapsed;
-//		} else { 
-//			glowing.Visibility = Visibility.Visible;
-//		}
-//	}
 }
