@@ -10,6 +10,10 @@ public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
     public glowBox1 GlowBox1;
+    public glowBox2 GlowBox2;
+    public glowBox3 GlowBox3;
+    public glowBox4 GlowBox4;
+
     int frame = 0;
 
     bool running;

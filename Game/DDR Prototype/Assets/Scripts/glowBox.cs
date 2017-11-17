@@ -14,7 +14,7 @@ public class glowBox1 : MonoBehaviour {
 	public void doesGlow(char bright) {
 
 		if (bright=='1') {
-			GameObject.SetActive(true);
+			left.SetActive(true);
 		}
 	else{
 		gameObject.SetActive(false);
@@ -35,7 +35,7 @@ public class glowBox2 : MonoBehaviour {
 	public void doesGlow(char bright) {
 
 		if (bright=='1') {
-			GameObject.SetActive(true);
+			right.SetActive(true);
 		}
 	else{
 		gameObject.SetActive(false);
@@ -56,7 +56,7 @@ public class glowBox3 : MonoBehaviour {
 	public void doesGlow(char bright) {
 
 		if (bright=='1') {
-			GameObject.SetActive(true);
+			up.SetActive(true);
 		}
 	else{
 		gameObject.SetActive(false);
@@ -78,7 +78,7 @@ public class glowBox4 : MonoBehaviour {
 	public void doesGlow(char bright) {
 
 		if (bright=='1') {
-			GameObject.SetActive(true);
+			down.SetActive(true);
 		}
 		else{
 			gameObject.SetActive(false);
