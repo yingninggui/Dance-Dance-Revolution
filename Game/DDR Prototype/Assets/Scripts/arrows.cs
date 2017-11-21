@@ -30,7 +30,7 @@ public class createArrows: MonoBehaviour {
 		}
 	}
 
-	GameObject createGameObject(int direction){
+	GameObject createGameObject(){
 		GameObject arrow = Instantiate (arrowPrefab); 
 		arrow.transform.GetComponentInParent = transform; 
 		arrow.gameObject.SetActive(false);
