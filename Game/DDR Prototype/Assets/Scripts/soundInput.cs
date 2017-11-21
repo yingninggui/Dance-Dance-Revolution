@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class soundInput : MonoBehaviour {
-	public AudioClip soundBackground; 
-	private AudioSource soundtrack; 
+	private AudioSource soundtrack;
+    private int frame_count = 0;
 
 	void Awake () {
-		soundtrack = GetComponent<AudioSource>();  
-	}
+		soundtrack = GetComponent<AudioSource>();
+        playSound();
+    }
+
 	void playSound ()
 	{
-		soundtrack.PlayOneShot (soundBackground, 1F);
+		soundtrack.Play ();
 	}
 
 	void Update ()
 	{
-		playSound ();
 	}
 
 }

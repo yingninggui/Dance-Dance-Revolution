@@ -23,7 +23,7 @@ public class createArrows: MonoBehaviour {
 	void Start () {
 		GameObject arrow = Instantiate (arrowPrefab); 
 		for (int i = 0; i < arrowsCount; i++) {
-			arrowInactive.Enqueue (createGameObject ()); 
+			arrowInactive.Enqueue (createGameObject()); 
 		}
 	}
 
@@ -60,19 +60,18 @@ public class createArrows: MonoBehaviour {
 	}
 
 	public GameObject Commission(){
+        GameObject obj;
 		if (arrowInactive.Count > 0) {
-			GameObject obj = arrowInactive.Dequeue ();
+			obj = arrowInactive.Dequeue ();
 			arrowActive.Add (obj);
 			obj.gameObject.SetActive (true);
-
-			return obj;
 		} else {
-			GameObject obj = createGameObject ();
+			obj = createGameObject ();
 			arrowActive.Add (obj);
 			obj.gameObject.SetActive (true);
-			return obj;
-		}
-	}
+        }
+        return obj;
+    }
 
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);
