@@ -9,6 +9,7 @@ public class score : MonoBehaviour {
 	public string misses; 
 
 	void Start () {
+
 	}
 
 	void Update (){
@@ -26,5 +27,7 @@ public class score : MonoBehaviour {
 		text.text = misses; 
 		scoreKeeper.AddComponent<Text> ();
 	}
+
+
 }	
 

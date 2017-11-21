@@ -16,6 +16,11 @@ public class soundInput : MonoBehaviour {
 		soundtrack.Play ();
 	}
 
+    void stopSound()
+    {
+        soundtrack.Stop();
+    }
+
 	void Update ()
 	{
 	}

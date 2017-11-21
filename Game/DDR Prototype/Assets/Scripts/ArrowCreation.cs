@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ArrowCreation : MonoBehaviour {
 
-    //audio
     public AudioSource audio;
-
     public createArrows create;
-
-    //settings
+    public const int bpm = 10;
+    
     public int channel;
     public FFTWindow _fftWindow;
     private float[] _samples = new float[1024];
@@ -32,7 +30,8 @@ public class ArrowCreation : MonoBehaviour {
             total_freq += _samples[i];
             //Debug.Log("Freq: " + _samples[i]);
         }
-        Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4));
-        //create.Commission();
+
+        Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
+        create.Commission(((int)(total_freq * 1000000) % 4) + 1);
     }
 }

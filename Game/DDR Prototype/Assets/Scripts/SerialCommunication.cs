@@ -51,7 +51,7 @@ public class SerialCommunication : MonoBehaviour {
         {
             string s = serial.ReadLine();
             char[] c = s.ToCharArray();
-            if (c.Length <= 0)
+            if (c.Length <= 0 || glowBoxes.Length <= 4)
                 return;
             switch(((int)(c[0] - '0')) % 4)
             {
