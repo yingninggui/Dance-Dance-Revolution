@@ -10,6 +10,7 @@ public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
     public glowBox[] glowBoxes;
+    public Scoring score;
 
     int frame = 0;
 
@@ -57,15 +58,19 @@ public class SerialCommunication : MonoBehaviour {
             {
                 case UP:
                     glowBoxes[0].changeGlow();
+                    score.pressedKey(UP);
                     break;
                 case DOWN:
                     glowBoxes[1].changeGlow();
+                    score.pressedKey(DOWN);
                     break;
                 case LEFT:
                     glowBoxes[2].changeGlow();
+                    score.pressedKey(LEFT);
                     break;
                 case RIGHT:
                     glowBoxes[3].changeGlow();
+                    score.pressedKey(RIGHT);
                     break;
             }
             Debug.Log(c);

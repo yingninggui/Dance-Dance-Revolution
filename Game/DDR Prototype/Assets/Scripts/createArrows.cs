@@ -5,7 +5,9 @@ using UnityEngine;
 public class createArrows: MonoBehaviour {
 
 	HashSet<GameObject> arrowActive = new HashSet<GameObject> (); 
-	Queue<GameObject> arrowInactive = new Queue<GameObject> (); 
+	Queue<GameObject> arrowInactive = new Queue<GameObject> ();
+
+    public Scoring score;
 
 	public HashSet<GameObject> getActiveArrows() {
 		return arrowActive; 
@@ -36,7 +38,6 @@ public class createArrows: MonoBehaviour {
 		arrow.gameObject.SetActive(false);
 		return arrow;  
 	}
-
 
 	public GameObject Commission(int direction){
         GameObject arrow;
