@@ -7,6 +7,11 @@ public class createArrows: MonoBehaviour {
 	HashSet<GameObject> arrowActive = new HashSet<GameObject> (); 
 	Queue<GameObject> arrowInactive = new Queue<GameObject> (); 
 
+	public HashSet<GameObject> getarrowActive() {
+		Debug.Log ("this is printing"); 
+		return arrowActive; 
+	} 
+
 	public int arrowsCount = 100; 
 	public GameObject arrowPrefab; 
 

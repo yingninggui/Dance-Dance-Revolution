@@ -16,6 +16,7 @@ public class score : MonoBehaviour {
 	}
 
 	void Update (){
+		
 	}
 
 	void OnTriggerEnter(Collider arrowTapped) {
