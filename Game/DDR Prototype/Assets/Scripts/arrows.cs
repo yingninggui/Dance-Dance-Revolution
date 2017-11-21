@@ -59,8 +59,22 @@ public class createArrows: MonoBehaviour {
 		return arrow; 
 	}
 
+	public GameObject Commission(){
+		if (arrowInactive.Count > 0) {
+			GameObject obj = arrowInactive.Dequeue ();
+			arrowActive.Add (obj);
+			obj.gameObject.SetActive (true);
+
+			return obj;
+		} else {
+			GameObject obj = createGameObject ();
+			arrowActive.Add (obj);
+			obj.gameObject.SetActive (true);
+			return obj;
+		}
+	}
+
 	void update() {
-		
 	}
 
 }
@@ -69,12 +83,10 @@ public class arrows : MonoBehaviour {
 
 	public float dropSpeed = 1f; 
 
-	// Use this for initialization
 	void Start () {
 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		float tracker = 1f; 
 
