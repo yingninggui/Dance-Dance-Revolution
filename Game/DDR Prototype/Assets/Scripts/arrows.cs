@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class arrows : MonoBehaviour {
 
-	public float dropSpeed = 1f; 
+	public float dropSpeed = 1f;
+
+    public GameObject ArrowUp;
+
+    createArrows create;
 
 	void Start () {
 	}
 
 	void Update () {
-		float tracker = 1f; 
+		float tracker = dropSpeed; 
 
-		while (tracker > 0) {
-			transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
+		while (tracker > 0 && transform.position.y > -3) {
+            transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 
-			Vector3 leftArrow = transform.position;
-			Vector3 rightArrow = transform.position;
-			Vector3 upArrow = transform.position;
-			Vector3 downArrow = transform.position;
-
-			if (transform.position.y == 0) {
-				break; 
-			}
 		}
+
+        //Debug.Log(transform.position.y);
+
+        if (transform.position.y <= -3)
+            create.Decommision(ArrowUp);
+
 	}
 }

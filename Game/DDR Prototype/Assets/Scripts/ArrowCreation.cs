@@ -7,6 +7,7 @@ public class ArrowCreation : MonoBehaviour {
     public AudioSource audio;
     public createArrows create;
     public const int bpm = 10;
+    private int frame_count = 0;
     
     public int channel;
     public FFTWindow _fftWindow;
@@ -23,15 +24,22 @@ public class ArrowCreation : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        total_freq = 0;
-        audio.GetSpectrumData(_samples, channel, _fftWindow);
-        for(int i = 0; i < 1024; i++)
+        // TODO Relate this to frame delta time
+        if (frame_count > 2)
         {
-            total_freq += _samples[i];
-            //Debug.Log("Freq: " + _samples[i]);
+            total_freq = 0;
+            audio.GetSpectrumData(_samples, channel, _fftWindow);
+            for (int i = 0; i < 1024; i++)
+            {
+                total_freq += _samples[i];
+                //Debug.Log("Freq: " + _samples[i]);
+            }
+
+            Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
+            create.Commission(((int)(total_freq * 1000000) % 4) + 1);
+            frame_count = 0;
         }
 
-        Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
-        create.Commission(((int)(total_freq * 1000000) % 4) + 1);
+        frame_count++;
     }
 }
