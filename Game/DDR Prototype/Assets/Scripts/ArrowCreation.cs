@@ -18,7 +18,7 @@ public class ArrowCreation : MonoBehaviour {
     {
         Debug.Log("Initializing Arrow Generation Class");
         //channel to sample from, stereo music has 2 channels
-        channel = 0;
+        channel = 1;
     }
 
     // Update is called once per frame
@@ -35,8 +35,9 @@ public class ArrowCreation : MonoBehaviour {
                 //Debug.Log("Freq: " + _samples[i]);
             }
 
-            Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
-            create.Commission(((int)(total_freq * 1000000) % 4) + 1);
+            //Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
+            //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
+            create.Commission(Random.Range(0, 4) + 1);
             frame_count = 0;
         }
 
