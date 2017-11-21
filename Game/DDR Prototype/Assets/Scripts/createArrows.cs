@@ -39,47 +39,47 @@ public class createArrows: MonoBehaviour {
 
 
 	public GameObject Commission(int direction){
-
-		switch(direction) {
-		case left: 
-			transform.Rotate (Vector3.forward * -90);
-			// arrowPrefab = transform.position; 
-			break; 
-
-		case right: // right
-			transform.Rotate (Vector3.forward * 90);
-			// arrowPrefab = transform.position; 
-			break; 
-
-		case up:
-			transform.Rotate (Vector3.forward * 0);
-			// arrowPrefab = transform.position; 
-			break; 
-
-		case down:
-			transform.Rotate (Vector3.forward * 180);
-			// arrowPrefab = transform.position; 
-			break;
-
-		}
+        GameObject arrow;
 
 		if (arrowInactive.Count > 0) {
-			GameObject arrow = arrowInactive.Dequeue ();
+			arrow = arrowInactive.Dequeue ();
 			arrowActive.Add (arrow);
+            arrow.transform.position = new Vector3(0, 6);
 			arrow.gameObject.SetActive (true);
-
-			return arrow;
 		} else {
-			GameObject arrow = createGameObject ();
-			arrowActive.Add (arrow);
-			arrow.gameObject.SetActive (true);
-			return arrow;
+            return null;
 		}
 
-	}
+        switch (direction)
+        {
+            case left:
+                arrow.transform.Rotate(Vector3.forward * -90);
+                // arrowPrefab = transform.position; 
+                break;
+
+            case right:
+                arrow.transform.Rotate(Vector3.forward * 90);
+                // arrowPrefab = transform.position; 
+                break;
+
+            case up:
+                arrow.transform.Rotate(Vector3.forward * 0);
+                // arrowPrefab = transform.position; 
+                break;
+
+            case down:
+                arrow.transform.Rotate(Vector3.forward * 180);
+                // arrowPrefab = transform.position; 
+                break;
+        }
+
+        return arrow;
+
+    }
 
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);
+        arrowActive.Remove(arrow);
 		arrowInactive.Enqueue (arrow);
 	}
 

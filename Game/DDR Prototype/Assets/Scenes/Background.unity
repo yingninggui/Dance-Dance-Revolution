@@ -356,9 +356,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 431642388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2fd9ef72e5a448e953a44377446aec, type: 3}
+  m_Script: {fileID: 11500000, guid: 17cc4692ccc464ee8bb3f1c6ac53d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropSpeed: 1
+  ArrowUp: {fileID: 431642388}
 --- !u!1 &454989392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameScreen: {fileID: 0}
+  GameScreen: {fileID: 1819647241}
   glowBoxes: []
 --- !u!114 &1819647247
 MonoBehaviour:
