@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class scoreLabel : MonoBehaviour {
 
-	void onGUI() {
-		GUI.Label(new Rect(4,-3,1,1), score.hits);
+	public score scoreTest; 
+
+	void OnGUI() {
+		GUI.Label(new Rect(4,-3,1,1), scoreTest.Hits.text);
 	}
 
 	void Start () {
-		onGUI (); 
+		OnGUI ();  
 	}
 	void update() {
-		
+		scoreTest.AddScore (4,5);
 	}
 
 }
