@@ -40,39 +40,42 @@ public class createArrows: MonoBehaviour {
 		if (arrowInactive.Count > 0) {
 			arrow = arrowInactive.Dequeue ();
 			arrowActive.Add (arrow);
-			arrow.gameObject.SetActive (true);
 		} else {
             arrow = createGameObject();
-            arrow.gameObject.SetActive(true);
             arrowActive.Add(arrow);
         }
 
         switch (direction)
         {
             case SerialCommunication.LEFT:
-                arrow.transform.position = new Vector3(-2.2f, 6);
-                arrow.transform.Rotate(Vector3.forward * -90);
+                arrow.transform.position = new Vector3(-2.2f, 6, 0);
+                arrow.transform.Rotate(0, 0, 90);
+                //arrow.transform.Rotate(Vector3.forward * -90);
                 // arrowPrefab = transform.position; 
                 break;
 
             case SerialCommunication.DOWN:
-                arrow.transform.position = new Vector3(-0.8f, 6);
-                arrow.transform.Rotate(Vector3.forward * 90);
+                arrow.transform.position = new Vector3(-0.8f, 6, 0);
+                arrow.transform.Rotate(0, 0, 180);
+                //arrow.transform.Rotate(Vector3.forward * 90);
                 // arrowPrefab = transform.position; 
                 break;
 
             case SerialCommunication.UP:
-                arrow.transform.position = new Vector3(0.7f, 6);
-                arrow.transform.Rotate(Vector3.forward * 0);
+                arrow.transform.position = new Vector3(0.7f, 6, 0);
+                //arrow.transform.rotation = new Quaternion(0, 0, 0, 0);
+                //arrow.transform.Rotate(Vector3.forward * 0);
                 // arrowPrefab = transform.position; 
                 break;
 
             case SerialCommunication.RIGHT:
-                arrow.transform.position = new Vector3(2.2f, 6);
-                arrow.transform.Rotate(Vector3.forward * 180);
+                arrow.transform.position = new Vector3(2.2f, 6, 0);
+                arrow.transform.Rotate(0, 0, 270);
+                //arrow.transform.Rotate(Vector3.forward * 180);
                 // arrowPrefab = transform.position; 
                 break;
         }
+        arrow.gameObject.SetActive(true);
         return arrow;
     }
 

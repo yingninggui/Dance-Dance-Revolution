@@ -19,7 +19,9 @@ public class arrows : MonoBehaviour {
 		float tracker = dropSpeed; 
 
 		while (tracker > 0 && transform.position.y > GLOW_BOX_HEIGHT) {
-            transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
+            Vector3 temp = transform.position;
+            temp.y -= dropSpeed * Time.deltaTime;
+            transform.position = temp; 
 			tracker -= 1; 
 		}
 

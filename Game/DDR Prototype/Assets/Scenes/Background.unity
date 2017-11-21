@@ -360,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpeed: 1
-  ArrowUp: {fileID: 0}
-  create: {fileID: 0}
+  ArrowUp: {fileID: 431642388}
+  create: {fileID: 431642392}
 --- !u!114 &431642392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,9 +373,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bb60e4aaddd4d38a703d100facd65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  score: {fileID: 431642393}
   arrowsCount: 100
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 431642388}
+--- !u!114 &431642393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431642388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b71829f5ed83674793fe935b2f91277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &454989392
 GameObject:
   m_ObjectHideFlags: 0
