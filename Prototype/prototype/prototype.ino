@@ -43,10 +43,14 @@ void loop() {
   
   Serial.flush();
 
+  val = digitalRead(UP + 2);
+  Serial.
 /*Old working code*/
-  /*if(val == 0 || reset == 1) {
+  if(val == 0 || reset == 1) {
     Serial.println(val);
     reset = (val == 0 ? 1 : 0);
-  }*/
+  }
+
+  Serial.flush();
   delay(30);
 }
