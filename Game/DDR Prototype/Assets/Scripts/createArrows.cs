@@ -44,30 +44,35 @@ public class createArrows: MonoBehaviour {
 		if (arrowInactive.Count > 0) {
 			arrow = arrowInactive.Dequeue ();
 			arrowActive.Add (arrow);
-            arrow.transform.position = new Vector3(0, 6);
 			arrow.gameObject.SetActive (true);
 		} else {
-            return null;
-		}
+            arrow = createGameObject();
+            arrow.gameObject.SetActive(true);
+            arrowActive.Add(arrow);
+        }
 
         switch (direction)
         {
             case left:
+                arrow.transform.position = new Vector3(-2.2f, 6);
                 arrow.transform.Rotate(Vector3.forward * -90);
                 // arrowPrefab = transform.position; 
                 break;
 
             case right:
+                arrow.transform.position = new Vector3(-0.8f, 6);
                 arrow.transform.Rotate(Vector3.forward * 90);
                 // arrowPrefab = transform.position; 
                 break;
 
             case up:
-                arrow.transform.Rotate(Vector3.forward * 0);
+                arrow.transform.position = new Vector3(0.7f, 6);
+                //arrow.transform.Rotate(Vector3.forward * 0);
                 // arrowPrefab = transform.position; 
                 break;
 
             case down:
+                arrow.transform.position = new Vector3(2.2f, 6);
                 arrow.transform.Rotate(Vector3.forward * 180);
                 // arrowPrefab = transform.position; 
                 break;

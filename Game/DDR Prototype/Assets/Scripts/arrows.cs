@@ -10,22 +10,22 @@ public class arrows : MonoBehaviour {
 
     public createArrows create;
 
+    public const float GLOW_BOX_HEIGHT = -3.5f;
+
 	void Start () {
-        Debug.Log("Started");
-        ArrowUp.transform.position = new Vector3(0, 6);
 	}
 
 	void Update () {
 		float tracker = dropSpeed; 
 
-		while (tracker > 0 && transform.position.y > -3.5) {
+		while (tracker > 0 && transform.position.y > GLOW_BOX_HEIGHT) {
             transform.Translate (Vector3.down * dropSpeed * Time.deltaTime); 
 			tracker -= 1; 
 		}
 
         //Debug.Log(transform.position.y);
 
-        if (transform.position.y <= -3.5)
+        if (transform.position.y <= GLOW_BOX_HEIGHT)
             create.Decommision(ArrowUp);
 
 	}
