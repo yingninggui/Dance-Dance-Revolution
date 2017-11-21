@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ArrowCreation : MonoBehaviour {
 
-    //audio
     public AudioSource audio;
     public createArrows create;
     public const int bpm = 10;
-
-    //settings
+    
     public int channel;
     public FFTWindow _fftWindow;
     private float[] _samples = new float[1024];

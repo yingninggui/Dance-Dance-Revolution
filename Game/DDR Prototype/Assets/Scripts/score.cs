@@ -12,7 +12,7 @@ public class score : MonoBehaviour {
 		hits = 0;
 		misses = 0; 
 		SetScoreText ();
-		hits.text = "";
+		//hits.text = "";
 	}
 
 	void Update (){
@@ -21,14 +21,14 @@ public class score : MonoBehaviour {
 
 	void OnTriggerEnter(Collider arrowTapped) {
 		if (arrowTapped) {
-			SetscoreCountText (); 
-			scoreCount++; 
+			//SetscoreCountText (); 
+			//scoreCount++; 
 		} else {
 			
 		}
 	}
 	void SetScoreText (){
-		hits.Text = hits.ToString ();
+		//hits.Text = hits.ToString ();
 	}
 
 }
