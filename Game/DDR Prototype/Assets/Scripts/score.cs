@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class score : MonoBehaviour {
 	public GameObject scoreKeeper = new GameObject("Score"); 
 	public string hits; 
