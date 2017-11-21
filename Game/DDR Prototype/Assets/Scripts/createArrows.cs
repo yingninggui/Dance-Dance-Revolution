@@ -33,53 +33,53 @@ public class createArrows: MonoBehaviour {
 		return arrow;  
 	}
 
-	Vector3 rotateArrow(int direction, Vector3 arrow){
-		switch(direction) {
-		case left: 
-			transform.Rotate (Vector3.forward * -90);
-			arrow = transform.position; 
-			break; 
-
-		case right: // right
-			transform.Rotate (Vector3.forward * 90);
-			arrow = transform.position; 
-			break; 
-
-		case up:
-			transform.Rotate (Vector3.forward * 0);
-			arrow = transform.position; 
-			break; 
-
-		case down:
-			transform.Rotate (Vector3.forward * 180);
-			arrow = transform.position; 
-			break;
-
-		}
-		return arrow; 
-	}
+//	Vector3 rotateArrow(int direction, Vector3 arrow){
+//		switch(direction) {
+//		case left: 
+//			transform.Rotate (Vector3.forward * -90);
+//			arrow = transform.position; 
+//			break; 
+//
+//		case right: // right
+//			transform.Rotate (Vector3.forward * 90);
+//			arrow = transform.position; 
+//			break; 
+//
+//		case up:
+//			transform.Rotate (Vector3.forward * 0);
+//			arrow = transform.position; 
+//			break; 
+//
+//		case down:
+//			transform.Rotate (Vector3.forward * 180);
+//			arrow = transform.position; 
+//			break;
+//
+//		}
+//		return arrow; 
+//	}
 
 	public GameObject Commission(int direction){
 
 		switch(direction) {
 		case left: 
 			transform.Rotate (Vector3.forward * -90);
-			arrowPrefab = transform.position; 
+			// arrowPrefab = transform.position; 
 			break; 
 
 		case right: // right
 			transform.Rotate (Vector3.forward * 90);
-			arrowPrefab = transform.position; 
+			// arrowPrefab = transform.position; 
 			break; 
 
 		case up:
 			transform.Rotate (Vector3.forward * 0);
-			arrowPrefab = transform.position; 
+			// arrowPrefab = transform.position; 
 			break; 
 
 		case down:
 			transform.Rotate (Vector3.forward * 180);
-			arrowPrefab = transform.position; 
+			// arrowPrefab = transform.position; 
 			break;
 
 		}
