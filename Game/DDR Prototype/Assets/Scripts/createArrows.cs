@@ -33,47 +33,7 @@ public class createArrows: MonoBehaviour {
 		return arrow;  
 	}
 
-//	Vector3 rotateArrow(int direction, Vector3 arrow){
-//		switch(direction) {
-//		case left: 
-//			transform.Rotate (Vector3.forward * -90);
-//			arrow = transform.position; 
-//			break; 
-//
-//		case right: // right
-//			transform.Rotate (Vector3.forward * 90);
-//			arrow = transform.position; 
-//			break; 
-//
-//		case up:
-//			transform.Rotate (Vector3.forward * 0);
-//			arrow = transform.position; 
-//			break; 
-//
-//		case down:
-//			transform.Rotate (Vector3.forward * 180);
-//			arrow = transform.position; 
-//			break;
-//
-//		}
-//		return arrow; 
-//	}
 
-<<<<<<< HEAD
-	public GameObject Commission(){
-        GameObject obj;
-		if (arrowInactive.Count > 0) {
-			obj = arrowInactive.Dequeue ();
-			arrowActive.Add (obj);
-			obj.gameObject.SetActive (true);
-		} else {
-			obj = createGameObject ();
-			arrowActive.Add (obj);
-			obj.gameObject.SetActive (true);
-        }
-        return obj;
-    }
-=======
 	public GameObject Commission(int direction){
 
 		switch(direction) {
@@ -113,7 +73,6 @@ public class createArrows: MonoBehaviour {
 		}
 
 	}
->>>>>>> 2423a102adcb34dde082f5f50f2cc34cc53e6fd2
 
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);
