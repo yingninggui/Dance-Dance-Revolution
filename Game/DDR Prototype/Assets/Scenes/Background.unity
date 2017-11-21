@@ -316,7 +316,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 860, y: 493, z: 0}
+  m_LocalPosition: {x: 478, y: 298.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -483,10 +483,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 511528297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d263d18efbb941b48954073ee64f568, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glow: {fileID: 1323940691559476, guid: 2a9526f300b994b9381db840179cd652, type: 2}
+  GlowBox: {fileID: 511528297}
 --- !u!1 &513307542
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,10 +622,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 733629265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad63b1e05bf9479db8784e407acd7bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glow: {fileID: 1610433068524206, guid: 01b0c007f82244e038a1d2f5fd6e2da9, type: 2}
+  GlowBox: {fileID: 733629265}
 --- !u!1 &1001785542 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1615198514445314, guid: c5bfc137fdc194e628017195befe2180,
@@ -639,10 +639,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001785542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d31795d1ca5743df9cde3b4857e824d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glow: {fileID: 1615198514445314, guid: c5bfc137fdc194e628017195befe2180, type: 2}
+  GlowBox: {fileID: 1001785542}
 --- !u!1001 &1469098843
 Prefab:
   m_ObjectHideFlags: 0
@@ -1027,7 +1027,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameScreen: {fileID: 1819647241}
-  GlowBox1: {fileID: 0}
+  glowBoxes:
+  - {fileID: 2079637009}
+  - {fileID: 1001785543}
+  - {fileID: 733629266}
+  - {fileID: 511528298}
 --- !u!114 &1819647246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,3 +1304,20 @@ Prefab:
     - {fileID: 114306686950781860, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2079637008 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1277345822466530, guid: aab2effe9372d4220b435b834ad1f69b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2079637007}
+--- !u!114 &2079637009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079637008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowBox: {fileID: 2079637008}
