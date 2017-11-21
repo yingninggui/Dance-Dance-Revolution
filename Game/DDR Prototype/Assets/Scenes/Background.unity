@@ -360,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpeed: 1
-  ArrowUp: {fileID: 431642388}
-  create: {fileID: 431642392}
+  ArrowUp: {fileID: 0}
+  create: {fileID: 0}
 --- !u!114 &431642392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bb60e4aaddd4d38a703d100facd65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 0}
   arrowsCount: 100
   arrowPrefab: {fileID: 0}
 --- !u!1 &454989392
@@ -496,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 511528297}
+  GlowBox: {fileID: 0}
 --- !u!1 &513307542
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 733629265}
+  GlowBox: {fileID: 0}
 --- !u!1 &1001785542 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1615198514445314, guid: c5bfc137fdc194e628017195befe2180,
@@ -652,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 1001785542}
+  GlowBox: {fileID: 0}
 --- !u!1001 &1469098843
 Prefab:
   m_ObjectHideFlags: 0
@@ -776,7 +777,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114947203050459698, guid: 8f5f9d831414d4833b52312fa50b764e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114947203050459698, guid: 8f5f9d831414d4833b52312fa50b764e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8f5f9d831414d4833b52312fa50b764e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1755365325
@@ -961,6 +968,7 @@ GameObject:
   - component: {fileID: 1819647247}
   - component: {fileID: 1819647244}
   - component: {fileID: 1819647248}
+  - component: {fileID: 1819647249}
   - component: {fileID: 1819647246}
   m_Layer: 0
   m_Name: GameScreen
@@ -1037,6 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65bb60e4aaddd4d38a703d100facd65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 1819647249}
   arrowsCount: 100
   arrowPrefab: {fileID: 431642388}
 --- !u!114 &1819647245
@@ -1051,7 +1060,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameScreen: {fileID: 1819647241}
-  glowBoxes: []
+  glowBoxes:
+  - {fileID: 2079637009}
+  - {fileID: 1001785543}
+  - {fileID: 733629266}
+  - {fileID: 511528298}
+  score: {fileID: 1819647249}
 --- !u!114 &1819647246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,9 +1077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreKeeper: {fileID: 0}
-  hits: 
-  misses: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!114 &1819647247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1105,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1819647249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819647241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b71829f5ed83674793fe935b2f91277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2065647432 stripped
@@ -1272,4 +1298,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 2079637008}
+  GlowBox: {fileID: 0}

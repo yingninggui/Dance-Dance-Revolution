@@ -21,11 +21,6 @@ public class createArrows: MonoBehaviour {
 	//	public GameObject upArrow; 
 	//	public GameObject downArrow; 
 
-	public const int left = 1;
-	public const int right = 2;
-	public const int up = 3;
-	public const int down = 4; 
-
 	void Start () {
 		GameObject arrow = Instantiate (arrowPrefab); 
 		for (int i = 0; i < arrowsCount; i++) {
@@ -54,33 +49,31 @@ public class createArrows: MonoBehaviour {
 
         switch (direction)
         {
-            case left:
+            case SerialCommunication.LEFT:
                 arrow.transform.position = new Vector3(-2.2f, 6);
                 arrow.transform.Rotate(Vector3.forward * -90);
                 // arrowPrefab = transform.position; 
                 break;
 
-            case right:
+            case SerialCommunication.DOWN:
                 arrow.transform.position = new Vector3(-0.8f, 6);
                 arrow.transform.Rotate(Vector3.forward * 90);
                 // arrowPrefab = transform.position; 
                 break;
 
-            case up:
+            case SerialCommunication.UP:
                 arrow.transform.position = new Vector3(0.7f, 6);
-                //arrow.transform.Rotate(Vector3.forward * 0);
+                arrow.transform.Rotate(Vector3.forward * 0);
                 // arrowPrefab = transform.position; 
                 break;
 
-            case down:
+            case SerialCommunication.RIGHT:
                 arrow.transform.position = new Vector3(2.2f, 6);
                 arrow.transform.Rotate(Vector3.forward * 180);
                 // arrowPrefab = transform.position; 
                 break;
         }
-
         return arrow;
-
     }
 
 	public void Decommision(GameObject arrow){

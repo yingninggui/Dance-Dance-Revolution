@@ -14,7 +14,7 @@ public class scoreLabel : MonoBehaviour {
 		OnGUI ();  
 	}
 	void update() {
-		scoreTest.AddScore (4,5);
+		//scoreTest.AddScore (4,5);
 	}
 
 }

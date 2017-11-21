@@ -44,12 +44,18 @@ public class ArrowCreation : MonoBehaviour {
 
             //Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
             //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
-            int position = Random.Range(0, 4);
-            active_arrows[position].Enqueue(create.Commission(position + 1));
+            //int position = Random.Range(0, 4);
+            int position = ((int)(total_freq * 1000000)) % 4;
+            active_arrows[position].Enqueue(create.Commission(position));
             
             frame_count = 0;
         }
 
         frame_count++;
+    }
+
+    public Queue<GameObject>[] getActiveArrows()
+    {
+        return active_arrows;
     }
 }

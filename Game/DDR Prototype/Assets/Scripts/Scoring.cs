@@ -6,11 +6,13 @@ public class Scoring : MonoBehaviour {
 
     HashSet<GameObject> set;
 
-    createArrows create;
+    ArrowCreation create;
+    score sc;
 
     public const int HIT_POINTS = 5, MISS_POINTS = -1;
+    public const float BOUNDARY_HEIGHT = -2.5f;
 
-    public Queue
+    private int total_score, total_hits, total_misses;
 
 	// Use this for initialization
 	void Start () {
@@ -23,16 +25,11 @@ public class Scoring : MonoBehaviour {
 
     public void pressedKey(int key)
     {
-        switch(key)
-        {
-            case SerialCommunication.UP:
-                break;
-            case SerialCommunication.DOWN:
-                break;
-            case SerialCommunication.LEFT:
-                break;
-            case SerialCommunication.RIGHT:
-                break; 
-        }
+        if (create.getActiveArrows()[key].Peek().transform.position.y <= BOUNDARY_HEIGHT)
+            total_hits++;
+        else
+            total_misses++;
+
+        sc.SetScore(total_hits, total_misses);
     }
 }
