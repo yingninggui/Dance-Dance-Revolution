@@ -23,7 +23,7 @@ public class createArrows: MonoBehaviour {
 	void Start () {
 		GameObject arrow = Instantiate (arrowPrefab); 
 		for (int i = 0; i < arrowsCount; i++) {
-			arrowInactive.Enqueue (createGameObject ()); 
+			arrowInactive.Enqueue (createGameObject()); 
 		}
 	}
 
@@ -59,6 +59,21 @@ public class createArrows: MonoBehaviour {
 //		return arrow; 
 //	}
 
+<<<<<<< HEAD
+	public GameObject Commission(){
+        GameObject obj;
+		if (arrowInactive.Count > 0) {
+			obj = arrowInactive.Dequeue ();
+			arrowActive.Add (obj);
+			obj.gameObject.SetActive (true);
+		} else {
+			obj = createGameObject ();
+			arrowActive.Add (obj);
+			obj.gameObject.SetActive (true);
+        }
+        return obj;
+    }
+=======
 	public GameObject Commission(int direction){
 
 		switch(direction) {
@@ -98,6 +113,7 @@ public class createArrows: MonoBehaviour {
 		}
 
 	}
+>>>>>>> 2423a102adcb34dde082f5f50f2cc34cc53e6fd2
 
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);

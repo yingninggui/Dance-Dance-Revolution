@@ -50,8 +50,10 @@ public class SerialCommunication : MonoBehaviour {
         try
         {
             string s = serial.ReadLine();
-            char c = s.ToCharArray()[0];
-            switch(((int)(c - '0')) % 4)
+            char[] c = s.ToCharArray();
+            if (c.Length <= 0)
+                return;
+            switch(((int)(c[0] - '0')) % 4)
             {
                 case UP:
                     glowBoxes[0].changeGlow();
