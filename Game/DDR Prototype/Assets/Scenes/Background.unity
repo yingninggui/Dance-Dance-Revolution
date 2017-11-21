@@ -315,7 +315,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 478, y: 296, z: 0}
+  m_LocalPosition: {x: 957, y: 493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpeed: 1
-  ArrowUp: {fileID: 431642388}
-  create: {fileID: 431642392}
+  ArrowUp: {fileID: 0}
+  create: {fileID: 0}
 --- !u!114 &431642392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 511528297}
+  GlowBox: {fileID: 0}
 --- !u!1 &513307542
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 733629265}
+  GlowBox: {fileID: 0}
 --- !u!1 &1001785542 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1615198514445314, guid: c5bfc137fdc194e628017195befe2180,
@@ -652,7 +652,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 1001785542}
+  GlowBox: {fileID: 0}
+--- !u!1 &1382735079 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186943808846268, guid: 8f5f9d831414d4833b52312fa50b764e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1708090816}
+--- !u!114 &1382735083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382735079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!1001 &1469098843
 Prefab:
   m_ObjectHideFlags: 0
@@ -776,6 +796,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114947203050459698, guid: 8f5f9d831414d4833b52312fa50b764e,
+        type: 2}
+      propertyPath: scoreTest
+      value: 
+      objectReference: {fileID: 1382735083}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f5f9d831414d4833b52312fa50b764e, type: 2}
   m_IsPrefabParent: 0
@@ -1038,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowsCount: 100
-  arrowPrefab: {fileID: 431642388}
+  arrowPrefab: {fileID: 0}
 --- !u!114 &1819647245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameScreen: {fileID: 1819647241}
+  GameScreen: {fileID: 0}
   glowBoxes: []
 --- !u!114 &1819647246
 MonoBehaviour:
@@ -1063,9 +1088,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreKeeper: {fileID: 0}
-  hits: 
-  misses: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!114 &1819647247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,8 +1103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651d4bed34e27a4c8e0df28aab20e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 31961332}
-  create: {fileID: 1819647244}
+  audio: {fileID: 0}
+  create: {fileID: 0}
   channel: 0
   _fftWindow: 0
 --- !u!114 &1819647248
@@ -1272,4 +1298,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5a9c082b6e4b97a61759e0d3c01b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowBox: {fileID: 2079637008}
+  GlowBox: {fileID: 0}
