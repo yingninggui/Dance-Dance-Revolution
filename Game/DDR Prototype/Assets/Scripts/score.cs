@@ -4,33 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class score : MonoBehaviour {
-	public GameObject scoreKeeper = new GameObject("Score"); 
-	public string hits; 
-	public string misses; 
+	public GameObject scoreKeeper; 
+	public string hits = "hits: "; 
+	public string misses = ""; 
 	void Start () {
 
 	}
 
 	void Update (){
 		Text text = scoreKeeper.GetComponent<Text> ();
-		text.text = hits;
+		text.text = hits; 
 	}
 		
-	void PrintResults (string hitsNumber, string missesNumber){
+	void displayResults (string hitsNumber, string missesNumber){
 		Text text = scoreKeeper.GetComponent<Text> ();
-		hits = "hits: "; 
-		hits += hitsNumber; 
+		hits = hitsNumber; 
 		text.text = hits; 
-		misses = ""; 
-		misses += missesNumber; 
+		misses = missesNumber; 
 		text.text = misses; 
 		scoreKeeper.AddComponent<Text> ();
+		GUI.Label(new Rect(4,-3,1,1), scoreKeeper);
 	}
-
-	void OnGUI() {
-		GUI.Label(new Rect(10, 10, 100, 20), hits);
-	}
-
-
+		
 }	
 
