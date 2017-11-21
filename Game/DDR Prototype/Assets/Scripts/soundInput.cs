@@ -6,7 +6,6 @@ public class soundInput : MonoBehaviour {
 	public AudioClip soundBackground; 
 	private AudioSource soundtrack; 
 
-
 	void Awake () {
 		soundtrack = GetComponent<AudioSource>();  
 	}
