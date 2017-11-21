@@ -4,20 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class glowBox1 : MonoBehaviour {
-	public static GameObject left;
-	int glowing = 0; 
+public class glowing: MonoBehaviour {
 
+	public GameObject GlowBox; 
+
+	char bright = '0'; 
 	void Start() {
 	}
 
-	public void doesGlow(char bright) {
+	public void doesGlow() {
 
 		if (bright=='1') {
-			left.SetActive(true);
+			GlowBox.SetActive(true);
+			bright = '0'; 
 		}
+
 	else{
 		gameObject.SetActive(false);
+			bright = '1'; 
 	}
 
 }
@@ -25,66 +29,67 @@ public class glowBox1 : MonoBehaviour {
 	}
 }
 
-public class glowBox2 : MonoBehaviour {
-	public static GameObject right;
-	int glowing = 0; 
-
-	void Start() {
-	}
-
-	public void doesGlow(char bright) {
-
-		if (bright=='1') {
-			right.SetActive(true);
-		}
-	else{
-		gameObject.SetActive(false);
-	}
-
-}
-void Update() {
-}
-}
-
-public class glowBox3 : MonoBehaviour {
-	public static GameObject up;
-	int glowing = 0; 
-
-	void Start() {
-	}
-
-	public void doesGlow(char bright) {
-
-		if (bright=='1') {
-			up.SetActive(true);
-		}
-	else{
-		gameObject.SetActive(false);
-	}
-
-}
-void Update() {
-}
-}
-
-public class glowBox4 : MonoBehaviour {
-
-	public static GameObject down;
-	int glowing = 0; 
-
-	void Start() {
-	}
-
-	public void doesGlow(char bright) {
-
-		if (bright=='1') {
-			down.SetActive(true);
-		}
-		else{
-			gameObject.SetActive(false);
-		}
-
-	}
-	void Update() {
-	}
-}
+//
+//public class glowBox2 : MonoBehaviour {
+//	public static GameObject right;
+//	int glowing = 0; 
+//
+//	void Start() {
+//	}
+//
+//	public void doesGlow(char bright) {
+//
+//		if (bright=='1') {
+//			right.SetActive(true);
+//		}
+//	else{
+//		gameObject.SetActive(false);
+//	}
+//
+//}
+//void Update() {
+//}
+//}
+//
+//public class glowBox3 : MonoBehaviour {
+//	public static GameObject up;
+//	int glowing = 0; 
+//
+//	void Start() {
+//	}
+//
+//	public void doesGlow(char bright) {
+//
+//		if (bright=='1') {
+//			up.SetActive(true);
+//		}
+//	else{
+//		gameObject.SetActive(false);
+//	}
+//
+//}
+//void Update() {
+//}
+//}
+//
+//public class glowBox4 : MonoBehaviour {
+//
+//	public static GameObject down;
+//	int glowing = 0; 
+//
+//	void Start() {
+//	}
+//
+//	public void doesGlow(char bright) {
+//
+//		if (bright=='1') {
+//			down.SetActive(true);
+//		}
+//		else{
+//			gameObject.SetActive(false);
+//		}
+//
+//	}
+//	void Update() {
+//	}
+//}
