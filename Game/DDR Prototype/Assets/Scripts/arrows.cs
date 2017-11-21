@@ -20,43 +20,48 @@ public class createArrows: MonoBehaviour {
 	public const int up = 3;
 	public const int down = 4; 
 
-
 	void Start () {
-
 		GameObject arrow = Instantiate (arrowPrefab); 
-
 		for (int i = 0; i < arrowsCount; i++) {
 			arrowInactive.Enqueue (createGameObject ()); 
 		}
 	}
 
 	GameObject createGameObject(){
-		GameObject arrow = Instantiate (arrowPrefab); 
-		arrow.transform.GetComponentInParent = transform; 
+		GameObject arrow = Instantiate (arrowPrefab);
 		arrow.gameObject.SetActive(false);
-
-		switch(direction) {
-			case left: 
-				arrow = transform.Rotate (270); 
-				break; 
-
-			case right: // right
-				arrow = transform.Rotate(90); 
-				break; 
-
-			case up:
-				arrow = transform.Rotate(0); 
-				break; 
-
-			case down:
-				transform.Rotate(180); 
-				break;
-
-		}
-
 		return arrow;  
 	}
 
+	Vector3 rotateArrow(int direction, Vector3 arrow){
+		switch(direction) {
+		case left: 
+			transform.Rotate (Vector3.forward * -90);
+			arrow = transform.position; 
+			break; 
+
+		case right: // right
+			transform.Rotate (Vector3.forward * 90);
+			arrow = transform.position; 
+			break; 
+
+		case up:
+			transform.Rotate (Vector3.forward * 0);
+			arrow = transform.position; 
+			break; 
+
+		case down:
+			transform.Rotate (Vector3.forward * 180);
+			arrow = transform.position; 
+			break;
+
+		}
+		return arrow; 
+	}
+
+	void update() {
+		
+	}
 
 }
 
@@ -86,10 +91,4 @@ public class arrows : MonoBehaviour {
 			}
 		}
 	}
-
-	void generateArrows() {
-		
-		
-	}
-
 }
