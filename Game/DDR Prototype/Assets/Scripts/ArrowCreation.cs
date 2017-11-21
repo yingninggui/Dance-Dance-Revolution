@@ -14,11 +14,18 @@ public class ArrowCreation : MonoBehaviour {
     private float[] _samples = new float[1024];
     float total_freq = 0;
 
+    public Queue<GameObject>[] active_arrows;
+
     void Start()
     {
         Debug.Log("Initializing Arrow Generation Class");
-        //channel to sample from, stereo music has 2 channels
-        channel = 1;
+        channel = 0;
+
+        active_arrows = new Queue<GameObject>[4];
+        for(int i = 0; i < 4; i++)
+        {
+            active_arrows[i] = new Queue<GameObject>();
+        }
     }
 
     // Update is called once per frame
@@ -37,7 +44,9 @@ public class ArrowCreation : MonoBehaviour {
 
             //Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
             //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
-            create.Commission(Random.Range(0, 4) + 1);
+            int position = Random.Range(0, 4);
+            active_arrows[position].Enqueue(create.Commission(position + 1));
+            
             frame_count = 0;
         }
 
