@@ -7,7 +7,6 @@ public class score : MonoBehaviour {
 	public GameObject scoreKeeper = new GameObject("Score"); 
 	public string hits; 
 	public string misses; 
-
 	void Start () {
 
 	}
@@ -19,13 +18,17 @@ public class score : MonoBehaviour {
 		
 	void PrintResults (string hitsNumber, string missesNumber){
 		Text text = scoreKeeper.GetComponent<Text> ();
-		hits = ""; 
+		hits = "hits: "; 
 		hits += hitsNumber; 
 		text.text = hits; 
 		misses = ""; 
 		misses += missesNumber; 
 		text.text = misses; 
 		scoreKeeper.AddComponent<Text> ();
+	}
+
+	void OnGUI() {
+		GUI.Label(new Rect(10, 10, 100, 20), hits);
 	}
 
 
