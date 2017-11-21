@@ -9,12 +9,12 @@ public class createArrows: MonoBehaviour {
 
 	public int arrowsCount = 100; 
 	public GameObject arrowPrefab; 
-//
+
 //	public GameObject leftArrow;  
 //	public GameObject rightArrow;
 //	public GameObject upArrow; 
 //	public GameObject downArrow; 
-//
+
 	public const int left = 1;
 	public const int right = 2;
 	public const int up = 3;
