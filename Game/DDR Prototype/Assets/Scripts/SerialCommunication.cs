@@ -9,10 +9,7 @@ using System.IO.Ports;
 public class SerialCommunication : MonoBehaviour {
 
     public GameObject GameScreen;
-    public glowBox1 GlowBox1;
-    public glowBox2 GlowBox2;
-    public glowBox3 GlowBox3;
-    public glowBox4 GlowBox4;
+    public glowBox[] glowBoxes;
 
     int frame = 0;
 
@@ -20,6 +17,8 @@ public class SerialCommunication : MonoBehaviour {
     Thread thread;
     private const string PORT = "\\\\.\\COM8";
     private SerialPort serial = new SerialPort(PORT, 9600);
+
+    public const int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3, CONST = 4;
 
     // Use this for initialization
     void Start () {
@@ -34,7 +33,6 @@ public class SerialCommunication : MonoBehaviour {
 
         Debug.Log(SerialPort.GetPortNames());
         serial.ReadTimeout = 5;
-        GlowBox1.doesGlow('1');
         running = true;
         try
         {
@@ -52,8 +50,23 @@ public class SerialCommunication : MonoBehaviour {
         try
         {
             string s = serial.ReadLine();
-            GlowBox1.doesGlow(s[0]);
-            Debug.Log(s);
+            char c = s.ToCharArray()[0];
+            switch(((int)(c - '0')) % 4)
+            {
+                case UP:
+                    glowBoxes[0].changeGlow();
+                    break;
+                case DOWN:
+                    glowBoxes[1].changeGlow();
+                    break;
+                case LEFT:
+                    glowBoxes[2].changeGlow();
+                    break;
+                case RIGHT:
+                    glowBoxes[3].changeGlow();
+                    break;
+            }
+            Debug.Log(c);
         }
         catch (Exception e)
         {
@@ -74,7 +87,7 @@ public class SerialCommunication : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         frame++;
-        if (frame % 2 == 0)
+        if (frame > 1)
         {
             checkSerialStream();
             frame = 0;
