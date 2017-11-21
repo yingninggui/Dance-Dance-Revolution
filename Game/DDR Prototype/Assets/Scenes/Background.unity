@@ -315,7 +315,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 478, y: 296, z: 0}
+  m_LocalPosition: {x: 957, y: 493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpeed: 1
-  ArrowUp: {fileID: 431642388}
-  create: {fileID: 431642392}
+  ArrowUp: {fileID: 0}
+  create: {fileID: 0}
 --- !u!114 &431642392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +665,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlowBox: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &1382735079 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186943808846268, guid: 8f5f9d831414d4833b52312fa50b764e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1708090816}
+--- !u!114 &1382735083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382735079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
+>>>>>>> d0d0b103e6b7046aedbd266519c40f11ce5c3f71
 --- !u!1001 &1469098843
 Prefab:
   m_ObjectHideFlags: 0
@@ -790,11 +813,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114947203050459698, guid: 8f5f9d831414d4833b52312fa50b764e,
         type: 2}
+<<<<<<< HEAD
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114947203050459698, guid: 8f5f9d831414d4833b52312fa50b764e, type: 2}
+=======
+      propertyPath: scoreTest
+      value: 
+      objectReference: {fileID: 1382735083}
+    m_RemovedComponents: []
+>>>>>>> d0d0b103e6b7046aedbd266519c40f11ce5c3f71
   m_ParentPrefab: {fileID: 100100000, guid: 8f5f9d831414d4833b52312fa50b764e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1755365325
@@ -1058,7 +1088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 1819647249}
   arrowsCount: 100
-  arrowPrefab: {fileID: 431642388}
+  arrowPrefab: {fileID: 0}
 --- !u!114 &1819647245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43b81a78763129489c8d7794de9992b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   GameScreen: {fileID: 1819647241}
   glowBoxes:
   - {fileID: 2079637009}
@@ -1077,6 +1108,10 @@ MonoBehaviour:
   - {fileID: 733629266}
   - {fileID: 511528298}
   score: {fileID: 1819647249}
+=======
+  GameScreen: {fileID: 0}
+  glowBoxes: []
+>>>>>>> d0d0b103e6b7046aedbd266519c40f11ce5c3f71
 --- !u!114 &1819647246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,8 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7651d4bed34e27a4c8e0df28aab20e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 31961332}
-  create: {fileID: 1819647244}
+  audio: {fileID: 0}
+  create: {fileID: 0}
   channel: 0
   _fftWindow: 0
 --- !u!114 &1819647248
