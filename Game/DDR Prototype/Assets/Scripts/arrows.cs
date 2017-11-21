@@ -74,6 +74,11 @@ public class createArrows: MonoBehaviour {
 		}
 	}
 
+	public void Decommision(GameObject arrow){
+		arrow.gameObject.SetActive (false);
+		arrowInactive.Enqueue (arrow);
+	}
+
 	void update() {
 	}
 
