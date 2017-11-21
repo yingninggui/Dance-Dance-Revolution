@@ -89,7 +89,6 @@ public class arrows : MonoBehaviour {
 	public float dropSpeed = 1f; 
 
 	void Start () {
-
 	}
 
 	void Update () {
