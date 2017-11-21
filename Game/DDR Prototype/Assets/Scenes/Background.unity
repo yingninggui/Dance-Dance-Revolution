@@ -316,7 +316,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 478, y: 298.5, z: 0}
+  m_LocalPosition: {x: 860, y: 493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -344,9 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2594221922664471f853ae758cf8e3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 0.5
-  theLeftArrow: {fileID: 1331620894620158, guid: a7b0bcc0ac6fe405db6264daa939eacf,
-    type: 2}
 --- !u!1 &431642388 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1413128266611938, guid: 352e966bcaca943e88d01904bc834722,
@@ -363,8 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2fd9ef72e5a448e953a44377446aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 0.9
-  theUpArrow: {fileID: 1413128266611938, guid: 352e966bcaca943e88d01904bc834722, type: 2}
 --- !u!1 &454989392
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '### '
+  m_Text: 'Score: ### '
 --- !u!222 &1755365328
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1153,9 +1148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94eb0df5dfb5f460cb6ba747db1d4d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 0.7
-  theRightArrow: {fileID: 1341541282970604, guid: ad6e41d61190d4ef6a1b53684176c381,
-    type: 2}
 --- !u!1001 &2070439550
 Prefab:
   m_ObjectHideFlags: 0

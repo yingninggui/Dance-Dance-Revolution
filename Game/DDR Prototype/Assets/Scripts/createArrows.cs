@@ -59,6 +59,7 @@ public class createArrows: MonoBehaviour {
 		return arrow; 
 	}
 
+<<<<<<< HEAD
 	public GameObject Commission(){
         GameObject obj;
 		if (arrowInactive.Count > 0) {
@@ -72,6 +73,47 @@ public class createArrows: MonoBehaviour {
         }
         return obj;
     }
+=======
+	public GameObject Commission(int direction){
+
+		switch(direction) {
+		case left: 
+			transform.Rotate (Vector3.forward * -90);
+			arrowPrefab = transform.position; 
+			break; 
+
+		case right: // right
+			transform.Rotate (Vector3.forward * 90);
+			arrowPrefab = transform.position; 
+			break; 
+
+		case up:
+			transform.Rotate (Vector3.forward * 0);
+			arrowPrefab = transform.position; 
+			break; 
+
+		case down:
+			transform.Rotate (Vector3.forward * 180);
+			arrowPrefab = transform.position; 
+			break;
+
+		}
+
+		if (arrowInactive.Count > 0) {
+			GameObject arrow = arrowInactive.Dequeue ();
+			arrowActive.Add (arrow);
+			arrow.gameObject.SetActive (true);
+
+			return arrow;
+		} else {
+			GameObject arrow = createGameObject ();
+			arrowActive.Add (arrow);
+			arrow.gameObject.SetActive (true);
+			return arrow;
+		}
+
+	}
+>>>>>>> 2423a102adcb34dde082f5f50f2cc34cc53e6fd2
 
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);
