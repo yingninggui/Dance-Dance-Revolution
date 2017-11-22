@@ -6,37 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class GameNavigation : MonoBehaviour {
 
-	public GameObject musicSelected;
-	public GameObject gameSummarySelected; 
-	public GameObject startSelected; 
+	private AssetBundle importedScenes;
+	private string[] scenes;
+
+	void Start() {
+		importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+		scenes = importedScenes .GetAllScenePaths();
+	}
 
 	public Texture play; 
 
-	public class ExampleClass : MonoBehaviour {
-		public Texture btnTexture;
-		void OnGUI() {
-			if (!btnTexture) {
-				Debug.LogError("Please assign a texture on the inspector");
-				return;
-			}
-			if (GUI.Button(new Rect(10, 10, 50, 50), btnTexture))
-				Debug.Log("Clicked the button with an image");
-
-			if (GUI.Button(new Rect(10, 70, 50, 30), "Click"))
-				Debug.Log("Clicked the button with text");
-
-		}
-	}
-
 	void OnGUI() {
 		if (GUI.Button (new Rect (10, 10, 5, 5), "Play")) {
-			SceneManager.LoadScene ("GameScreen");
+			SceneManager.LoadScene (scenes[1], LoadSceneMode.Single);
 		}
 		if (GUI.Button (new Rect (10, 10, 5, 5), "Play Again")) {
-			SceneManager.LoadScene  ("Start");
+		//	SceneManager.LoadScene  ("Start");
+			SceneManager.LoadScene (scenes[0], LoadSceneMode.Single);
 		}
 		if (gameEnd(1)) {
-			SceneManager.LoadScene ("GameSummary");
+		//	SceneManager.LoadScene ("GameSummary");
+			SceneManager.LoadScene (scenes[2], LoadSceneMode.Single);
 		}
 	}
 	bool gameEnd(int end) {
@@ -66,10 +56,7 @@ public class GameNavigation : MonoBehaviour {
 //
 //		Application.LoadLevel(scene);
 //	}
-//
-	void Start () {
-		
-	}
+
 	
 	// Update is called once per frame
 	void Update () {
