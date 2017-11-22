@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// File to be deleted.
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class soundInput : MonoBehaviour {
 		soundtrack = GetComponent<AudioSource>();
         playSound();
     }
-
+		
 	void playSound ()
 	{
 		soundtrack.Play();
