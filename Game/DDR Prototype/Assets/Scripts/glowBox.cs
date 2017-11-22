@@ -8,7 +8,7 @@ public class glowBox: MonoBehaviour {
 
 	public GameObject GlowBox; 
 
-	int bright = -1; 
+	int bright = 1; 
 	void Start() {
         GlowBox.SetActive(false);
 	}

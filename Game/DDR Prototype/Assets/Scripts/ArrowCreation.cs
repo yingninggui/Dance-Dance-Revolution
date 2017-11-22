@@ -46,7 +46,7 @@ public class ArrowCreation : MonoBehaviour {
             //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
             //int position = Random.Range(0, 4);
             int position = ((int)(total_freq * 1000000)) % 4;
-            //Debug.Log(position);
+            Debug.Log(position);
             active_arrows[position].Enqueue(create.Commission(position));
             
             frame_count = 0;
