@@ -7,7 +7,7 @@ public class scoreLabel : MonoBehaviour {
 	public score scoreTest; 
 
 	void OnGUI() {
-		GUI.Label(new Rect(4,-3,1,1), scoreTest.Hits.text);
+		GUI.Label(new Rect(1,1,0,0), scoreTest.Hits.text);
 	}
 
 	void Start () {

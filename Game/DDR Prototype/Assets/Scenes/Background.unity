@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 67260283}
   - component: {fileID: 67260282}
   - component: {fileID: 67260281}
+  - component: {fileID: 67260285}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -296,7 +297,7 @@ Canvas:
   m_GameObject: {fileID: 67260280}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -305,7 +306,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2649539
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &67260284
@@ -315,10 +316,9 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 957, y: 493, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1755365326}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -327,6 +327,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &67260285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 67260280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!1 &431642388 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1413128266611938, guid: 352e966bcaca943e88d01904bc834722,
@@ -707,6 +722,7 @@ GameObject:
   - component: {fileID: 1755365326}
   - component: {fileID: 1755365328}
   - component: {fileID: 1755365327}
+  - component: {fileID: 1755365329}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -720,16 +736,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755365325}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 1}
-  m_LocalScale: {x: 100, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.459999, y: 10.72, z: 2}
+  m_LocalScale: {x: 200, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 67260284}
+  m_Father: {fileID: 1903775851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -9.46, y: 10.72}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755365327
@@ -771,6 +787,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755365325}
+--- !u!114 &1755365329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755365325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!1001 &1803597059
 Prefab:
   m_ObjectHideFlags: 0
@@ -989,6 +1020,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   play: {fileID: 0}
+--- !u!1 &1903775849 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186943808846268, guid: 8f5f9d831414d4833b52312fa50b764e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1708090816}
+--- !u!4 &1903775851 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4551410072822414, guid: 8f5f9d831414d4833b52312fa50b764e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1708090816}
+--- !u!114 &1903775852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903775849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218e14cf757444791b13c8f32c43b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hits: {fileID: 0}
+  Misses: {fileID: 0}
+  hitsCount: 0
+  missesCount: 0
 --- !u!1001 &2070439550
 Prefab:
   m_ObjectHideFlags: 0
