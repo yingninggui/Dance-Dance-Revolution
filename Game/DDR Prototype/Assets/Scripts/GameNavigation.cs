@@ -1,36 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class GameNavigation : MonoBehaviour {
 
-	public GameObject musicSelected;
-	public GameObject gameSummarySelected; 
-	public GameObject startSelected; 
+	private AssetBundle importedScenes;
+	private string[] scenes;
 
-	public void LoadScene(int scene) {
-
-		if (scene == 1) {
-			musicSelected.SetActive (true); 
-			gameSummarySelected.SetActive (false); 
-			startSelected.SetActive (false);
-		} else if (scene == 2) {
-			gameSummarySelected.SetActive (true); 
-			musicSelected.SetActive (false); 
-			startSelected.SetActive (false);
-		}
-		else {
-			startSelected.SetActive (true);
-			gameSummarySelected.SetActive (false); 
-			musicSelected.SetActive (false); 
-		}
-
-		Application.LoadLevel(scene);
+	void Start() {
+		importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+		scenes = importedScenes .GetAllScenePaths();
 	}
 
-	void Start () {
-		
+	public Texture play; 
+
+	void OnGUI() {
+		if (GUI.Button (new Rect (10, 10, 5, 5), "Play")) {
+			SceneManager.LoadScene (scenes[1], LoadSceneMode.Single);
+		}
+		if (GUI.Button (new Rect (10, 10, 5, 5), "Play Again")) {
+		//	SceneManager.LoadScene  ("Start");
+			SceneManager.LoadScene (scenes[0], LoadSceneMode.Single);
+		}
+		if (gameEnd(1)) {
+		//	SceneManager.LoadScene ("GameSummary");
+			SceneManager.LoadScene (scenes[2], LoadSceneMode.Single);
+		}
 	}
+	bool gameEnd(int end) {
+		if (end == 1) {
+			return true; 
+		} else {
+			return false; 
+		}
+	}
+
+//	public void LoadScene(int scene) {
+//
+//		if (scene == 1) {
+//			musicSelected.SetActive (true); 
+//			gameSummarySelected.SetActive (false); 
+//			startSelected.SetActive (false);
+//		} else if (scene == 2) {
+//			gameSummarySelected.SetActive (true); 
+//			musicSelected.SetActive (false); 
+//			startSelected.SetActive (false);
+//		}
+//		else {
+//			startSelected.SetActive (true);
+//			gameSummarySelected.SetActive (false); 
+//			musicSelected.SetActive (false); 
+//		}
+//
+//		Application.LoadLevel(scene);
+//	}
+
 	
 	// Update is called once per frame
 	void Update () {
