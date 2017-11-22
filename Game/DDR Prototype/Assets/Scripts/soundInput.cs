@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class soundInput : MonoBehaviour {
-	private AudioSource soundtrack;
+	public AudioSource soundtrack;
     private int frame_count = 0;
 
 	void Awake () {
-		soundtrack = GetComponent<AudioSource>();
         playSound();
     }
 

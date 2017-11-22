@@ -51,9 +51,12 @@ public class SerialCommunication : MonoBehaviour {
         try
         {
             string s = serial.ReadLine();
+            //Debug.Log(s);
             char[] c = s.ToCharArray();
-            if (c.Length <= 0 || glowBoxes.Length <= 4)
+            //Debug.Log(glowBoxes.Length);
+            if (c.Length <= 0 || glowBoxes.Length < 4)
                 return;
+            Debug.Log(c[0]);
             switch(((int)(c[0] - '0')) % 4)
             {
                 case UP:
@@ -73,7 +76,7 @@ public class SerialCommunication : MonoBehaviour {
                     score.pressedKey(RIGHT);
                     break;
             }
-            Debug.Log(c);
+            //Debug.Log(c);
         }
         catch (Exception e)
         {

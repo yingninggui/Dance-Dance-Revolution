@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundtrack: {fileID: 31961332}
 --- !u!1 &67260280
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1819647249}
-  arrowsCount: 100
+  arrowsCount: 200
   arrowPrefab: {fileID: 431642388}
 --- !u!114 &1819647245
 MonoBehaviour:
@@ -965,6 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundtrack: {fileID: 31961332}
 --- !u!114 &1819647249
 MonoBehaviour:
   m_ObjectHideFlags: 0
