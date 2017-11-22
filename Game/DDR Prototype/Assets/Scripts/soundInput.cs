@@ -5,17 +5,13 @@ using UnityEngine;
 
 public class soundInput : MonoBehaviour {
 	private AudioSource soundtrack;
+    public AudioManager audio;
     private int frame_count = 0;
 
 	void Awake () {
-		soundtrack = GetComponent<AudioSource>();
-        playSound();
+        //soundtrack = GetComponent<AudioSource>();
+        audio.playSound(AudioManager.tShirtWeather);
     }
-		
-	void playSound ()
-	{
-		soundtrack.Play();
-	}
 
     void stopSound()
     {

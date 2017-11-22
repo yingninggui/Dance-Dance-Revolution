@@ -28,6 +28,11 @@ public class ArrowCreation : MonoBehaviour {
         }
     }
 
+    public void setAudio(AudioSource a)
+    {
+        audio = a;
+    }
+
     // Update is called once per frame
     void Update()
     {

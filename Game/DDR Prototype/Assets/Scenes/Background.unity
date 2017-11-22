@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 31961333}
   - component: {fileID: 31961332}
   - component: {fileID: 31961334}
+  - component: {fileID: 31961335}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -135,10 +136,10 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 31961331}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 820691eef3a644eb180d160db8cce7d9, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -228,11 +229,24 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 31961331}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 31961335}
+--- !u!114 &31961335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 31961331}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94ed11deef2d4417aa152b41f2bc437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
 --- !u!1 &67260280
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +329,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 957, y: 493, z: 0}
+  m_LocalPosition: {x: 478, y: 296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -607,6 +621,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlowBox: {fileID: 1001785542}
+--- !u!1 &1617689365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1617689367}
+  - component: {fileID: 1617689366}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1617689366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1617689365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94ed11deef2d4417aa152b41f2bc437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: winPoints
+    clip: {fileID: 8300000, guid: 72d4a75f27a23419eac3dd60bf0815b9, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: losePoints
+    clip: {fileID: 8300000, guid: a328a7267ce2b4cbaaedadb087f90de0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: borns
+    clip: {fileID: 8300000, guid: a20f3ca927a1d4692b5b42642fce2bf8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: circa
+    clip: {fileID: 8300000, guid: 8f8a081bbcda5405e999363a1a324b42, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: neon
+    clip: {fileID: 8300000, guid: b73da15bcdac9407880b729b25855c9e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: young
+    clip: {fileID: 8300000, guid: 707dc2ed148dc4597b102849791b6efe, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: robert
+    clip: {fileID: 8300000, guid: 57cb6381d6a5c41d29f34456878e8f01, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+--- !u!4 &1617689367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1617689365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.073319525, y: -0.042839803, z: 0.0009607889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1651288890
 Prefab:
   m_ObjectHideFlags: 0
@@ -966,6 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3032f2ac6c1d04f7590dc375147b08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 1617689366}
 --- !u!114 &1819647249
 MonoBehaviour:
   m_ObjectHideFlags: 0
