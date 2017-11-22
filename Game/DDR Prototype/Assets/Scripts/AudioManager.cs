@@ -5,8 +5,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
 	public Sound[] sounds;
-	public const int win_points = 0, lose_point = 1;
-	public const int borns = 2, tShirtWeather = 3, Animal = 4, Palmer = 5, SunShine = 6;
+
+    private int current_song = 0;
+
+	public const int win_points = 0, lose_point = 1, borns = 2, tShirtWeather = 3, Animal = 4, Palmer = 5, SunShine = 6;
 
     ArrowCreation initializer;
 
@@ -22,6 +24,14 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+    public AudioSource getAudioSource()
+    {
+        Debug.Log(sounds.Length);
+        if (sounds.Length == 0)
+            return null;
+        return sounds[current_song].source;
+    }
+
 	void Start ()
 	{
 		
@@ -32,8 +42,10 @@ public class AudioManager : MonoBehaviour {
         if (sounds.Length == 0)
             Awake();
         Debug.Log("LENGTH OF ARRAY: " + sounds.Length);
+        if (sounds.Length <= song)
+            return;
 		sounds [song].source.Play ();
-        initializer.setAudio(sounds[song].source);
+        current_song = song;
 	}
 }
 
