@@ -138,7 +138,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 380b29682d1754fd3b6e97a2959f9bf7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 820691eef3a644eb180d160db8cce7d9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -315,7 +315,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 67260280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 478, y: 296, z: 0}
+  m_LocalPosition: {x: 957, y: 493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1755365326}
@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 1819647248}
   - component: {fileID: 1819647249}
   - component: {fileID: 1819647246}
+  - component: {fileID: 1819647250}
   m_Layer: 0
   m_Name: GameScreen
   m_TagString: Untagged
@@ -976,6 +977,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b71829f5ed83674793fe935b2f91277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1819647250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819647241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c80e379cec3642058fdeb99815cfc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: {fileID: 0}
 --- !u!1001 &2070439550
 Prefab:
   m_ObjectHideFlags: 0
