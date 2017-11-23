@@ -28,13 +28,9 @@ public class ArrowCreation : MonoBehaviour {
         {
             active_arrows[i] = new Queue<GameObject>();
         }
-        //score.endGame();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // TODO Relate this to frame delta time
+		
+    void Update() {
         if (frame_count > 1/Time.deltaTime)
         {
             total_freq = 0;

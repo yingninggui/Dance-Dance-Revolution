@@ -11,8 +11,7 @@ public class soundInput : MonoBehaviour {
         audio.playSound();
     }
 
-	void Update ()
-	{
+	void Update (){
 	}
 
 }

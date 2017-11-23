@@ -10,19 +10,16 @@ public class pointsCollectsound : MonoBehaviour {
 
 	private AudioSource source;
 
-	// Use this for initialization
 	void Awake () {
 		source = GetComponent<AudioSource>();
 
 	}
 	
-	void GetPointEnter ()
-	{
+	void GetPointEnter (){
 		source.PlayOneShot (getPoint, 1F);
 	}
 
-	void Update ()
-	{
+	void Update (){
 		GetPointEnter ();
 	}
 }
