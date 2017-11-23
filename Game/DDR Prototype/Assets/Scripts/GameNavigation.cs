@@ -10,17 +10,25 @@ using UnityEngine.SceneManagement;
  */
 public class GameNavigation : MonoBehaviour {
 
-	private AssetBundle importedScenes;
     public static int current_song = AudioManager.borns;
 
+    /*
+     * Constants representing build order of respective Scene in AssetBundle
+     */
     public const int START = 0, GAME = 1, SUMMARY = 2;
 
     public static int hits, misses;
 
 	void Start() {
+        // Allows GameNavigation to exists and not be reloaded as the game 
+        // progresses though each scene
         DontDestroyOnLoad(this);
 	}
 
+    /*
+     * Load Scene in single mode, which deletes objects from current scene, 
+     * then loads the next scene
+     */
     private void loadScene(int s){
         SceneManager.LoadScene(s, LoadSceneMode.Single);
     }

@@ -9,9 +9,8 @@ public class AudioManager : MonoBehaviour {
     private int current_song = 0;
 
     /*
-     * DON'T CHANGE THESE VALUES --> They are hardcoded into the song selection menu without reference to these constants
+     * Constants representing position of each song in Sound array
      */
-	//making constants for each song, so we can refer to it in the array.
 	public const int win_points = 0, lose_point = 1, borns = 2, tShirtWeather = 3, Animal = 4, Palmer = 5, SunShine = 6;
 
     ArrowCreation initializer;
@@ -41,7 +40,10 @@ public class AudioManager : MonoBehaviour {
 	{
 		
 	}
-	//plays the song here.
+
+	/*
+     * Plays the song that was last selected by the user in the Start screen
+     */ 
 	public void playSound ()
 	{
         int song = GameNavigation.current_song;

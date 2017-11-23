@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System;
-using System.Threading;
 using System.IO.Ports;
 
 public class SerialCommunication : MonoBehaviour {
@@ -13,9 +12,7 @@ public class SerialCommunication : MonoBehaviour {
     public Scoring score;
 
     int frame = 0;
-
-    bool running;
-    Thread thread;
+   
     private const string PORT = "\\\\.\\COM8";
     private SerialPort serial = new SerialPort(PORT, 9600);
 
@@ -35,7 +32,6 @@ public class SerialCommunication : MonoBehaviour {
 
         Debug.Log(SerialPort.GetPortNames());
         serial.ReadTimeout = 5;
-        running = true;
         try
         {
             serial.Open();
@@ -49,20 +45,20 @@ public class SerialCommunication : MonoBehaviour {
 
     void checkSerialStream()
     {
-        /*
-         * score.pressedKey(RIGHT);
-         * score.pressedKey(LEFT);
-         * score.pressedKey(UP);
-         * score.pressedKey(DOWN);        
-        */
         try
         {
-            //string s = serial.ReadLine();
-            //char[] c = s.ToCharArray();
-            //if (c.Length <= 0 || glowBoxes.Length <= 4)
-            //return;
-            char[] c = new char[1];
-            c[0] = (char)(UnityEngine.Random.Range(0, 4) + (int)'0') ; 
+            string s = serial.ReadLine();
+            char[] c = s.ToCharArray();
+
+            // Don't proceed if glow boxes aren't loaded
+            if (c.Length <= 0 || glowBoxes.Length < 4)
+                return;
+
+            //Test code to simulate game pad presses through Arduino
+            //char[] c = new char[1];
+            //c[0] = (char)(UnityEngine.Random.Range(0, 4) + (int)'0') ; 
+            
+            // Pressed appropriate box based on which pad is pressed
             switch(((int)(c[0] - '0')) % 4)
             {
                 case UP:
@@ -82,7 +78,7 @@ public class SerialCommunication : MonoBehaviour {
                     score.pressedKey(RIGHT);
                     break;
             }
-            //Debug.Log(c);
+
         }
         catch (Exception e)
         {
@@ -92,17 +88,12 @@ public class SerialCommunication : MonoBehaviour {
 
     void OnDisable()
     {
-        Debug.Log("Exiting Thread");
-        if (running)
-        {
-            running = false;
-            //thread.Join();
-        }
     }
 
     // Update is called once per frame
     void Update () {
         frame++;
+        // Check stream every other frame
         if (frame > 1)
         {
             checkSerialStream();
