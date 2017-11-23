@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour {
 			s.source.loop = s.loop;
             Debug.Log(sounds.Length + ":" + s.name);
 		}
+        playSound();
 	}
 
     public AudioSource getAudioSource()
@@ -37,8 +38,9 @@ public class AudioManager : MonoBehaviour {
 		
 	}
 
-	public void playSound (int song)
+	public void playSound ()
 	{
+        int song = GameNavigation.current_song;
         if (sounds.Length <= song)
             return;
 		sounds [song].source.Play ();

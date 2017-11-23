@@ -8,16 +8,21 @@ public class GameNavigation : MonoBehaviour {
 
 	private AssetBundle importedScenes;
 	private string[] scenes;
+    public static int current_song = AudioManager.borns;
+
+    public const int START = 0, GAME = 1, SUMMARY = 2; 
 
 	void Start() {
         importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
         scenes = importedScenes .GetAllScenePaths();
+        DontDestroyOnLoad(this);
         //SceneManager.LoadScene("Start", LoadSceneMode.Single);
 	}
 
 	public Texture play; 
 
 	void OnGUI() {
+        Debug.Log("ABOUT TO DO SOMETHING LMAO");
 		if (GUI.Button (new Rect (1, 1, 0, 0), "Play")) {
 			SceneManager.LoadScene (scenes[0], LoadSceneMode.Single);
 			Debug.Log ("awake");
@@ -40,9 +45,15 @@ public class GameNavigation : MonoBehaviour {
 		}
 	}
 
-    public void SongSelected(int integer)
+    private void loadScene(int s)
     {
+        SceneManager.LoadScene(s, LoadSceneMode.Single);
+    }
 
+    public void SongSelected(int i)
+    {
+        current_song = i;
+        loadScene(GAME);
     }
 
 //	public void LoadScene(int scene) {

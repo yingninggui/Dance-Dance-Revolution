@@ -25,6 +25,7 @@ public class SerialCommunication : MonoBehaviour {
     void Start () {
         /*thread = new Thread(StartSerialCommunication);
         thread.Start();*/
+        //DontDestroyOnLoad(this);
         StartSerialCommunication();
     }
 
