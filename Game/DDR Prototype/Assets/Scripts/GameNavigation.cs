@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 
+/*
+ * Remains in existence throughout all scenes (uses DontDestroyOnLoad)
+ * in order to switch between game scenes on certain events
+ */
 public class GameNavigation : MonoBehaviour {
 
 	private AssetBundle importedScenes;
