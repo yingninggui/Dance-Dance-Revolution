@@ -1,16 +1,35 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSummary : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public const string HITS_TAG = "# Hits: ", MISSES_TAG = "# Misses: ";
+    //public const string HITS_TAG = "", MISSES_TAG = "";
+
+    public Text HitsText, MissesText;
+    public GameNavigation game;
+
+    void Start()
+    {
+        UpdateScore();
+        /*while (!UpdateScore())
+        {
+            Debug.LogError("Loading game summary statictics failed");
+        }*/
+
+    }
+
+    private bool UpdateScore()
+    {
+        HitsText.text = HITS_TAG + GameNavigation.hits;
+        MissesText.text = MISSES_TAG + GameNavigation.misses;
+        return true;
+    }
+
+    public void playAgain()
+    {
+        Debug.Log("Play again called");
+        game.restartGame();
+    }
 }

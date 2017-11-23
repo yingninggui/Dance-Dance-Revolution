@@ -82,7 +82,7 @@ public class SerialCommunication : MonoBehaviour {
                     score.pressedKey(RIGHT);
                     break;
             }
-            Debug.Log(c);
+            //Debug.Log(c);
         }
         catch (Exception e)
         {

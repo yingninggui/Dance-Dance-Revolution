@@ -5,6 +5,7 @@ using UnityEngine;
 public class ArrowCreation : MonoBehaviour {
 
     public AudioManager audio;
+    public Scoring score;
     public createArrows create;
     public const int bpm = 10;
     private int frame_count = 0;
@@ -27,6 +28,7 @@ public class ArrowCreation : MonoBehaviour {
         {
             active_arrows[i] = new Queue<GameObject>();
         }
+        //score.endGame();
     }
 
     // Update is called once per frame
@@ -67,10 +69,11 @@ public class ArrowCreation : MonoBehaviour {
     {
         create.Decommision(o);
         total_active_arrows--;
-
-        //TODO call game over here
+        
         if (total_active_arrows == 0)
-            return;
+        {
+            score.endGame();
+        }
     }
 
     public Queue<GameObject>[] getActiveArrows()

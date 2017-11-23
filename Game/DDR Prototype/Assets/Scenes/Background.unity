@@ -271,7 +271,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 98093115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 486, y: -244, z: 0}
+  m_LocalPosition: {x: 388, y: -189, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 829253670}
@@ -578,7 +578,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 829253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 576, y: 324, z: 0}
+  m_LocalPosition: {x: 478, y: 269, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 98093116}
@@ -694,7 +694,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110371041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 486, y: -284, z: 0}
+  m_LocalPosition: {x: 388, y: -229, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 829253670}
@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 1617689366}
+  score: {fileID: 1819647249}
   create: {fileID: 1819647244}
   channel: 0
   _fftWindow: 0
@@ -1138,6 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b71829f5ed83674793fe935b2f91277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 1819647250}
   create: {fileID: 1819647247}
   sc: {fileID: 1819647246}
 --- !u!114 &1819647250
@@ -1151,7 +1153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c80e379cec3642058fdeb99815cfc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  play: {fileID: 0}
 --- !u!1 &1903775849 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1186943808846268, guid: 8f5f9d831414d4833b52312fa50b764e,

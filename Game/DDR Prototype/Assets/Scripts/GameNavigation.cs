@@ -10,7 +10,9 @@ public class GameNavigation : MonoBehaviour {
 	//private ArrayList scenes;
     public static int current_song = AudioManager.borns;
 
-    public const int START = 0, GAME = 1, SUMMARY = 2; 
+    public const int START = 0, GAME = 1, SUMMARY = 2;
+
+    public static int hits, misses;
 
 	void Start() {
         //importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
@@ -38,6 +40,18 @@ public class GameNavigation : MonoBehaviour {
     {
         current_song = i;
         loadScene(GAME);
+    }
+
+    public void endGame(int h, int m)
+    {
+        hits = h;
+        misses = m;
+        loadScene(SUMMARY);
+    }
+
+    public void restartGame()
+    {
+        loadScene(START);
     }
 
 	

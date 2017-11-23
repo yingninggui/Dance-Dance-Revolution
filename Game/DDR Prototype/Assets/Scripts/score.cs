@@ -16,16 +16,9 @@ public class score : MonoBehaviour {
 	}
 
 	public void SetScore (int hitsNumber, int missesNumber){
-
 		hitsCount = hitsNumber;
 		missesCount = missesNumber; 
 		UpdateScore ();
-
-		//text = scoreKeeper.GetComponent<Text> ();
-		//text.text = hits + hitsNumber; 
-		//text.text = misses + missesNumber; 
-		// scoreKeeper.AddComponent<Text> ();
-		//GUI.Label(new Rect(4,-3,1,1), scoreKeeper);
 	}
 
 	void UpdateScore () {
