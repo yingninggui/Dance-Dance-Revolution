@@ -55,14 +55,14 @@ public class createArrows: MonoBehaviour {
                 break;
 
             case SerialCommunication.DOWN:
-                arrow.transform.position = new Vector3(-0.8f, 6, 0);
+                arrow.transform.position = new Vector3(-0.7f, 6, 0);
                 arrow.transform.Rotate(0, 0, 180);
                 //arrow.transform.Rotate(Vector3.forward * 90);
                 // arrowPrefab = transform.position; 
                 break;
 
             case SerialCommunication.UP:
-                arrow.transform.position = new Vector3(0.7f, 6, 0);
+                arrow.transform.position = new Vector3(0.8f, 6, 0);
                 //arrow.transform.rotation = new Quaternion(0, 0, 0, 0);
                 //arrow.transform.Rotate(Vector3.forward * 0);
                 // arrowPrefab = transform.position; 

@@ -25,6 +25,7 @@ public class SerialCommunication : MonoBehaviour {
     void Start () {
         /*thread = new Thread(StartSerialCommunication);
         thread.Start();*/
+        //DontDestroyOnLoad(this);
         StartSerialCommunication();
     }
 
@@ -48,16 +49,20 @@ public class SerialCommunication : MonoBehaviour {
 
     void checkSerialStream()
     {
-        score.pressedKey(RIGHT);
-        score.pressedKey(LEFT);
-        score.pressedKey(UP);
-        score.pressedKey(DOWN);
+        /*
+         * score.pressedKey(RIGHT);
+         * score.pressedKey(LEFT);
+         * score.pressedKey(UP);
+         * score.pressedKey(DOWN);        
+        */
         try
         {
-            string s = serial.ReadLine();
-            char[] c = s.ToCharArray();
-            if (c.Length <= 0 || glowBoxes.Length <= 4)
-                return;
+            //string s = serial.ReadLine();
+            //char[] c = s.ToCharArray();
+            //if (c.Length <= 0 || glowBoxes.Length <= 4)
+            //return;
+            char[] c = new char[1];
+            c[0] = (char)(UnityEngine.Random.Range(0, 4) + (int)'0') ; 
             switch(((int)(c[0] - '0')) % 4)
             {
                 case UP:

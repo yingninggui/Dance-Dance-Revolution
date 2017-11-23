@@ -8,7 +8,7 @@ public class soundInput : MonoBehaviour {
     private int frame_count = 0;
 
 	void Awake () {
-        audio.playSound(AudioManager.tShirtWeather);
+        audio.playSound();
     }
 
 	void Update ()
