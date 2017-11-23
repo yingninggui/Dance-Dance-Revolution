@@ -10,8 +10,9 @@ public class GameNavigation : MonoBehaviour {
 	private string[] scenes;
 
 	void Start() {
-		importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-		scenes = importedScenes .GetAllScenePaths();
+        importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+        scenes = importedScenes .GetAllScenePaths();
+        //SceneManager.LoadScene("Start", LoadSceneMode.Single);
 	}
 
 	public Texture play; 
@@ -31,13 +32,18 @@ public class GameNavigation : MonoBehaviour {
 		}
 	}
 
-	bool gameEnd(int end) {
+	public bool gameEnd(int end) {
 		if (end == 1) {
 			return true; 
 		} else {
 			return false; 
 		}
 	}
+
+    public void SongSelected(int integer)
+    {
+
+    }
 
 //	public void LoadScene(int scene) {
 //

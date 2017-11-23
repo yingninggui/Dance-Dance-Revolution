@@ -15,6 +15,7 @@ public class ArrowCreation : MonoBehaviour {
     float total_freq = 0;
 
     public Queue<GameObject>[] active_arrows;
+    private int total_active_arrows = 0;
 
     void Start()
     {
@@ -53,18 +54,23 @@ public class ArrowCreation : MonoBehaviour {
             //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
             //int position = Random.Range(0, 4);
             int position = ((int)(total_freq * 1000000)) % 4;
-            //Debug.Log(position);
+            Debug.Log(position);
             active_arrows[position].Enqueue(create.Commission(position));
+            total_active_arrows++;
             
             frame_count = 0;
-        }
-
-        frame_count++;
+        } else
+            frame_count++;
     }
 
     public void removeArrow(GameObject o)
     {
         create.Decommision(o);
+        total_active_arrows--;
+
+        //TODO call game over here
+        if (total_active_arrows == 0)
+            return;
     }
 
     public Queue<GameObject>[] getActiveArrows()

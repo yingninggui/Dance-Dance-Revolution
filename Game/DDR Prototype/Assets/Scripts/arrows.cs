@@ -8,7 +8,7 @@ public class arrows : MonoBehaviour {
 
     public GameObject ArrowUp;
 
-    public createArrows create;
+    public ArrowCreation create;
 
     public const float GLOW_BOX_HEIGHT = -3.5f;
 
@@ -28,7 +28,7 @@ public class arrows : MonoBehaviour {
         //Debug.Log(transform.position.y);
 
         if (transform.position.y <= GLOW_BOX_HEIGHT)
-            create.Decommision(ArrowUp);
+            create.removeArrow(ArrowUp);
 
 	}
 }
