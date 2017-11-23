@@ -13,9 +13,9 @@ public class AudioManager : MonoBehaviour {
      */
 	public const int win_points = 0, lose_point = 1, borns = 2, tShirtWeather = 3, Animal = 4, Palmer = 5, SunShine = 6;
 
-    ArrowCreation initializer;
-
-	// Use this for initialization
+    /*
+     * Update Sound array with loaded assets on awake
+     */ 
 	void Awake () { 
 		foreach (Sound s in sounds) {
 			s.source = gameObject.AddComponent<AudioSource> ();

@@ -33,6 +33,10 @@ public class createArrows: MonoBehaviour {
 		return arrow;  
 	}
 
+    /*
+     * Commision previously loaded arrow from inactive arrow queue provided 
+     * one exists, otherwise, load new arrow and add to active arrows queue
+     */
 	public GameObject Commission(int direction){
         GameObject arrow;
 
@@ -44,7 +48,7 @@ public class createArrows: MonoBehaviour {
             arrowActive.Add(arrow);
         }
 
-	// to rotate arrows
+	// Rotate arrows to specified angle
         switch (direction){
             case SerialCommunication.LEFT:
                 arrow.transform.position = new Vector3(-2.2f, 6, 0);
@@ -69,6 +73,10 @@ public class createArrows: MonoBehaviour {
         return arrow;
     }
 
+    /*
+     * Remove arrow from active queue, add it to inactive queue for future use,
+     * and remove from game view
+     */
 	public void Decommision(GameObject arrow){
 		arrow.gameObject.SetActive (false);
         arrowActive.Remove(arrow);

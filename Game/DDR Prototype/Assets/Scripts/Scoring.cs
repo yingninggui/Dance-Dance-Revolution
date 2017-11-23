@@ -23,6 +23,10 @@ public class Scoring : MonoBehaviour {
     void Update() {
     }
 
+    /*
+     * On user pad press, check if repsective queue has active arrows below top of glow box,
+     * scoring appropriately
+     */ 
     public void pressedKey(int key)
     {
         if (create.getActiveArrows()[key].Peek().transform.position.y <= BOUNDARY_HEIGHT)
