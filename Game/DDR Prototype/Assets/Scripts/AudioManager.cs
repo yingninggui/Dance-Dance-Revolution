@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour {
 
     private int current_song = 0;
 
+    // DON'T CHANGE THESE VALUES --> They are hardcoded into the song selection menu without reference to these constants
 	public const int win_points = 0, lose_point = 1, borns = 2, tShirtWeather = 3, Animal = 4, Palmer = 5, SunShine = 6;
 
     ArrowCreation initializer;
