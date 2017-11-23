@@ -1316,6 +1316,10 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1277345822466530, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114306686950781860, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: aab2effe9372d4220b435b834ad1f69b, type: 2}
