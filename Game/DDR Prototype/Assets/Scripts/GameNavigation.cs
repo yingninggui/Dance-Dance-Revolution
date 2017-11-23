@@ -17,11 +17,11 @@ public class GameNavigation : MonoBehaviour {
 	public Texture play; 
 
 	void OnGUI() {
-		if (GUI.Button (new Rect (1, 1, 0, 0), "Play")) {
+		if (GUI.Button (new Rect (1, 1, 4, 4), "Play")) {
 			SceneManager.LoadScene (scenes[0], LoadSceneMode.Single);
 			Debug.Log ("awake");
 		}
-		if (GUI.Button (new Rect (1, 1, 0, 0), "Play Again")) {
+		if (GUI.Button (new Rect (1, 1, 4, 4), "Play Again")) {
 		//	SceneManager.LoadScene  ("Start");
 			SceneManager.LoadScene (scenes[2], LoadSceneMode.Single);
 		}
