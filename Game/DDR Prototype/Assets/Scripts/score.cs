@@ -21,6 +21,7 @@ public class score : MonoBehaviour {
 		UpdateScore ();
 	}
 
+	//text to be printed on the screen for hte misses and hits.
 	void UpdateScore () {
 		HitsText.text = HITS_TAG + hitsCount;
 		MissesText.text = MISSES_TAG + missesCount;

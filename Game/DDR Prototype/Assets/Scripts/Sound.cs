@@ -7,7 +7,7 @@ public class Sound {
 
 	public string name;
 
-
+	// creating variables for each of the sounds, so that we can control it from the Inspector.
 	public AudioClip clip;
 	[Range (0f, 1f)]
 	public float volume;
