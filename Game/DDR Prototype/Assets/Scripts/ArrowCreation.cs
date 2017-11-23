@@ -62,6 +62,11 @@ public class ArrowCreation : MonoBehaviour {
         frame_count++;
     }
 
+    public void removeArrow(GameObject o)
+    {
+        create.Decommision(o);
+    }
+
     public Queue<GameObject>[] getActiveArrows()
     {
         return active_arrows;

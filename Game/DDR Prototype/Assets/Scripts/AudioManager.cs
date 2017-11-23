@@ -39,9 +39,6 @@ public class AudioManager : MonoBehaviour {
 
 	public void playSound (int song)
 	{
-        if (sounds.Length == 0)
-            Awake();
-        Debug.Log("LENGTH OF ARRAY: " + sounds.Length);
         if (sounds.Length <= song)
             return;
 		sounds [song].source.Play ();

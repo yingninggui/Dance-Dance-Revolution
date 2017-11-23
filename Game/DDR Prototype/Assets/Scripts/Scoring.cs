@@ -6,8 +6,8 @@ public class Scoring : MonoBehaviour {
 
     HashSet<GameObject> set;
 
-    ArrowCreation create;
-    score sc;
+    public ArrowCreation create;
+    public score sc;
 
     public const int HIT_POINTS = 5, MISS_POINTS = -1;
     public const float BOUNDARY_HEIGHT = -2.5f;
@@ -20,13 +20,15 @@ public class Scoring : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
     public void pressedKey(int key)
     {
         if (create.getActiveArrows()[key].Peek().transform.position.y <= BOUNDARY_HEIGHT)
+        {
             total_hits++;
+            create.removeArrow(create.getActiveArrows()[key].Dequeue());
+        }
         else
             total_misses++;
 

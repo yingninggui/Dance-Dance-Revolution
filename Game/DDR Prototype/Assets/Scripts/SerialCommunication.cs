@@ -48,6 +48,10 @@ public class SerialCommunication : MonoBehaviour {
 
     void checkSerialStream()
     {
+        score.pressedKey(RIGHT);
+        score.pressedKey(LEFT);
+        score.pressedKey(UP);
+        score.pressedKey(DOWN);
         try
         {
             string s = serial.ReadLine();
