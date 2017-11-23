@@ -790,8 +790,8 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
-  - name: circa
-    clip: {fileID: 8300000, guid: 8f8a081bbcda5405e999363a1a324b42, type: 3}
+  - name: faded_cut
+    clip: {fileID: 8300000, guid: a6d2f40d7277744d3bd3d9ef8fefede6, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

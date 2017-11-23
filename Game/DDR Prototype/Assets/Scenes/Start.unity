@@ -1059,7 +1059,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: T-Shirt Weather
+  m_Text: Faded (Short Version)
 --- !u!222 &1169903781
 CanvasRenderer:
   m_ObjectHideFlags: 0
