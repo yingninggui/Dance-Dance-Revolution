@@ -22,7 +22,7 @@ public class arrows : MonoBehaviour {
             Vector3 temp = transform.position;
             temp.y -= dropSpeed * Time.deltaTime;
             transform.position = temp; 
-			tracker -= 1; 
+			tracker -= 1;
 		}
 
         //Debug.Log(transform.position.y);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowCreation : MonoBehaviour {
 
-    public AudioSource audio;
+    public AudioManager audio;
     public createArrows create;
     public const int bpm = 10;
     private int frame_count = 0;
@@ -22,7 +22,7 @@ public class ArrowCreation : MonoBehaviour {
         channel = 0;
 
         active_arrows = new Queue<GameObject>[4];
-        for(int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             active_arrows[i] = new Queue<GameObject>();
         }
@@ -32,27 +32,39 @@ public class ArrowCreation : MonoBehaviour {
     void Update()
     {
         // TODO Relate this to frame delta time
-        if (frame_count > 2)
+        if (frame_count > 1/Time.deltaTime)
         {
             total_freq = 0;
-            audio.GetSpectrumData(_samples, channel, _fftWindow);
+            AudioSource source = audio.getAudioSource();
+            if (source == null)
+                return;
+
+            source.GetSpectrumData(_samples, channel, _fftWindow);
             for (int i = 0; i < 1024; i++)
             {
                 total_freq += _samples[i];
                 //Debug.Log("Freq: " + _samples[i]);
             }
 
+            if (total_freq < 0.001)
+                return;
+
             //Debug.Log("Total Freq: " + ((int)(total_freq * 1000000) % 4) + 1);
             //create.Commission(((int)(total_freq * 1000000) % 4) + 1);
             //int position = Random.Range(0, 4);
             int position = ((int)(total_freq * 1000000)) % 4;
-            Debug.Log(position);
+            //Debug.Log(position);
             active_arrows[position].Enqueue(create.Commission(position));
             
             frame_count = 0;
         }
 
         frame_count++;
+    }
+
+    public void removeArrow(GameObject o)
+    {
+        create.Decommision(o);
     }
 
     public Queue<GameObject>[] getActiveArrows()

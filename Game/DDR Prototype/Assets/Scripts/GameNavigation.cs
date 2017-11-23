@@ -30,6 +30,7 @@ public class GameNavigation : MonoBehaviour {
 			SceneManager.LoadScene (scenes[1], LoadSceneMode.Single);
 		}
 	}
+
 	bool gameEnd(int end) {
 		if (end == 1) {
 			return true; 

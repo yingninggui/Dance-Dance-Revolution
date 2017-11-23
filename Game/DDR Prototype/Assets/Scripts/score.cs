@@ -4,19 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class score : MonoBehaviour {
-//	public GameObject scoreKeeper; 
-//	public const string hits ="hits: "; 
-//	public const string misses = "misses: "; 
 
-	//public GUIText scoreText;
-	public GUIText Hits; 
-	public GUIText Misses; 
-	private int scoreCount; 
-	public int hitsCount =0;
-	public int missesCount =0;
+    public const string HITS_TAG = "Hits: ", MISSES_TAG = "Misses: ";
+	public int hitsCount = 0;
+	public int missesCount = 0;
+
+    public Text HitsText, MissesText;
 
 	void Start () {
-		scoreCount = 0;
 		UpdateScore (); 
 	}
 
@@ -34,8 +29,8 @@ public class score : MonoBehaviour {
 	}
 
 	void UpdateScore () {
-		Hits.text = "Hits: " + hitsCount;
-		Misses.text = "Misess: " + missesCount;
+		HitsText.text = HITS_TAG + hitsCount;
+		MissesText.text = MISSES_TAG + missesCount;
 	}
 		
 }	
