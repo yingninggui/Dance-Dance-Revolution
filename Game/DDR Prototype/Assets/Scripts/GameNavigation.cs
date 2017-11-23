@@ -14,9 +14,11 @@ public class GameNavigation : MonoBehaviour {
 
 	void Start() {
         importedScenes = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+        importedScenes.GetAllAssetNames();
         scenes = importedScenes .GetAllScenePaths();
         DontDestroyOnLoad(this);
-        //SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        Debug.Log("HIIII");
+        SceneManager.LoadScene(scenes[1], LoadSceneMode.Single);
 	}
 
 	public Texture play; 
@@ -31,7 +33,7 @@ public class GameNavigation : MonoBehaviour {
 		//	SceneManager.LoadScene  ("Start");
 			SceneManager.LoadScene (scenes[2], LoadSceneMode.Single);
 		}
-		if (gameEnd(1)) {
+		if (gameEnd(0)) {
 		//	SceneManager.LoadScene ("GameSummary");
 			SceneManager.LoadScene (scenes[1], LoadSceneMode.Single);
 		}
